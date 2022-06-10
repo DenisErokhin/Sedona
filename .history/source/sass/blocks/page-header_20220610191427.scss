@@ -56,11 +56,11 @@
   }
 
   .main-nav--closed .main-nav__button-close {
-    background-image: url("../img/icon-menu.svg");
+    background-image: url(../img/icon-menu.svg");
   }
 
   .main-nav--opened .main-nav__button-close {
-    background-image: url("../img/icon-close.svg");
+    background-image: url("../../img/icon-close.svg");
   }
 
   .main-nav--opened {
@@ -78,7 +78,7 @@
   display: grid;
   justify-items: center;
   background-color: gray;
-  background-image: url("../img/triangle-greetings.svg"), url("../img/montains-mobile.jpg");
+  background-image: url("../../img/triangle-greetings.svg"), url("../../img/montains-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom -1px center, center;
   background-size: 1200px 57px, 901px 389px;
@@ -87,7 +87,7 @@
   @media (min-width: $tablet-width) {
     padding-top: 77px;
     padding-bottom: 89px;
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-tablet.jpg");
+    background-image: url("../../img/triangle-greetings.svg"), url("../../img/mountains-tablet.jpg");
     background-size: 1200px 57px, 1200px 518px;
   }
 }
