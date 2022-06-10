@@ -134,9 +134,9 @@ img {
   .main-nav--nojs .main-nav__button-close {
     display: none; }
   .main-nav--closed .main-nav__button-close {
-    background-image: url("../../img/icon-menu.svg"); }
+    background-image: url("../img/icon-menu.svg"); }
   .main-nav--opened .main-nav__button-close {
-    background-image: url("../../img/icon-close.svg"); }
+    background-image: url("../img/icon-close.svg"); }
   .main-nav--opened {
     position: absolute;
     top: 0;
@@ -150,7 +150,7 @@ img {
   display: grid;
   justify-items: center;
   background-color: gray;
-  background-image: url("../../img/triangle-greetings.svg"), url("../../img/montains-mobile.jpg");
+  background-image: url("../img/triangle-greetings.svg"), url("../img/montains-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom -1px center, center;
   background-size: 1200px 57px, 901px 389px; }
@@ -158,7 +158,7 @@ img {
     .page-header__greeting {
       padding-top: 77px;
       padding-bottom: 89px;
-      background-image: url("../../img/triangle-greetings.svg"), url("../../img/mountains-tablet.jpg");
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-tablet.jpg");
       background-size: 1200px 57px, 1200px 518px; } }
 
 .page-header__greeting-img {
@@ -328,11 +328,11 @@ img {
     .socials__link:active::before {
       opacity: 0.3; }
   .socials__link--twitter::before {
-    background-image: url("../../img/icon-twitter.svg"); }
+    background-image: url("../img/icon-twitter.svg"); }
   .socials__link--facebook::before {
-    background-image: url("../../img/icon-facebook.svg"); }
+    background-image: url("../img/icon-facebook.svg"); }
   .socials__link--youtube::before {
-    background-image: url("../../img/icon-youtube.svg"); }
+    background-image: url("../img/icon-youtube.svg"); }
 
 .copyright {
   display: flex;
@@ -356,9 +356,9 @@ img {
 
 .main-header {
   padding-top: 158px;
-  background-image: url("../../img/sedona.svg"), url("../../img/slice-greetings.svg"), url("../../img/mountains-background-form.jpg");
+  background-image: url("../img/sedona.svg"), url("../img/slice-greetings.svg"), url("../img/mountains-background-form.jpg");
   background-repeat: no-repeat;
-  background-position: top 52px center, top 101px center, top -56px center; }
+  background-position: top 52px center, top 101px center, top -56px center; }
 
 .main-header__title {
   font-size: 18px;
@@ -634,16 +634,16 @@ img {
         background-size: contain;
         background-position: center; } }
   .recommendations__item--house::before {
-    background-image: url("../../img/icon-house.svg"); }
+    background-image: url("../img/icon-house.svg"); }
   .recommendations__item--souvenirs::before {
-    background-image: url("../../img/icon-gift.svg"); }
+    background-image: url("../img/icon-gift.svg"); }
   .recommendations__item--souvenirs br {
     display: none; }
     @media (min-width: 1200px) {
       .recommendations__item--souvenirs br {
         display: block; } }
   .recommendations__item--food::before {
-    background-image: url("../../img/icon-burger.svg"); }
+    background-image: url("../img/icon-burger.svg"); }
   .recommendations__item--food br {
     display: none; }
     @media (min-width: 768px) {
