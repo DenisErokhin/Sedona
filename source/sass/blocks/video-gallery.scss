@@ -1,0 +1,43 @@
+.video-gallery {
+  padding-top: 32px;
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.video-gallery__video {
+  width: 100%;
+  height: 201px;
+
+  @media (min-width: $tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 800px;
+  }
+}
+
+.video-gallery__subtitle {
+  margin: 0;
+  text-align: center;
+}
+
+.video-gallery__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: $black-100;
+  margin: 0;
+  margin-bottom: 33px;
+}

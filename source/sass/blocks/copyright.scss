@@ -1,0 +1,26 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright__link {
+  display: inline-block;
+  height: 35px;
+
+  &:hover path {
+    fill: $blue-100;
+  }
+
+  &:active path {
+    fill: $black-200;
+    opacity: 0.3;
+  }
+}

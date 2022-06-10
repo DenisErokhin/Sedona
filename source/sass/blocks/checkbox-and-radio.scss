@@ -1,0 +1,43 @@
+.check-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $gray-200;
+  }
+}
+
+.check-label:hover::before {
+  background-color: $gray-300;
+}
+
+.check-label:active {
+  &::before {
+    background-color: $gray-400;
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.check-input:checked + .check-label {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 17px;
+  }
+}
+
+.check-input:focus-visible + label::before {
+  outline: 2px solid $black-200;
+  outline-offset: -2px;
+}

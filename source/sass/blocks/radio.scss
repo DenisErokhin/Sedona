@@ -1,0 +1,17 @@
+.radio__label {
+  height: 58px;
+  padding-left: 84px;
+
+  &::before {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+  }
+}
+
+.radio__input:checked + .radio__label {
+  &::after {
+    background-color: $black-100;
+    border-radius: 50%;
+  }
+}

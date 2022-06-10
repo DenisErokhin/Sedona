@@ -1,0 +1,131 @@
+.recommendations {
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 330px;
+    padding-top: 37px;
+    padding-bottom: 59px;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.recommendations__item {
+  margin-bottom: 26px;
+  padding-left: 70px;
+  padding-right: 11px;
+  position: relative;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    width: 230px;
+    flex-grow: 1;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+    padding-top: 100px;
+    margin-top: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+    margin-right: 40px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-of-type(2) {
+    order: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    top: -9px;
+    left: 18px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      margin-left: auto;
+      margin-right: auto;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 76px;
+      height: 75px;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  &--house {
+    &::before {
+      background-image: url("../../img/icon-house.svg");
+    }
+  }
+
+  &--souvenirs {
+    &::before {
+      background-image: url("../../img/icon-gift.svg");
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
+    }
+  }
+
+  &--food {
+    &::before {
+      background-image: url("../../img/icon-burger.svg");
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
+  }
+}
+
+.recommendations__term {
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.recommendations__desc {
+  color: $black-100;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 29px;
+    margin-left: 29px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}

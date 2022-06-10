@@ -1,0 +1,11 @@
+.impression-group__item {
+  margin-bottom: 11px;
+
+  &:first-of-type {
+    margin-top: 20px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+}

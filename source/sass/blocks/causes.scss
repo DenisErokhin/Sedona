@@ -1,0 +1,257 @@
+.causes {
+  margin-top: -1px;
+}
+
+.causes__slogan {
+  margin: 0;
+  margin-top: 32px;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+    margin-top: 44px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 55px;
+  }
+}
+
+.causes__desc {
+  margin: 0;
+  color: $black-100;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 11px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 41px;
+  }
+}
+
+.causes__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: causes;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.causes__wrapper {
+  &--top {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &--bottom {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+.causes__inner {
+  background-color: $blue-100;
+  display: grid;
+  align-content: space-between;
+
+  &::before {
+    text-align: center;
+    color: $white-100;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    content: "— №" counter(causes) "—";
+  }
+}
+
+.causes__inner--top {
+  background-image: url("../../img/triangle-cause.svg");
+
+  background-repeat: no-repeat;
+  background-position: top -21px center;
+  padding: 55px 10px 39px 10px;
+  min-height: 211px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding: 40px 32px 43px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 47px 52px 56px 52px;
+  }
+}
+
+.causes__inner--bottom {
+  min-height: 191px;
+  padding: 39px 15px 35px 15px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    padding: 43px 36px 41px 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 51px 73px 52px 73px;
+  }
+}
+
+.causes__img {
+  display: block;
+  background-color: $gray-100;
+  width: 800px;
+  object-fit: cover;
+}
+
+.causes__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  order: -1;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+
+    br {
+      display: block;
+    }
+  }
+}
+
+.causes__title--changed {
+  color: $white-100;
+}
+
+.causes__text {
+  color: $black-100;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+  text-align: center;
+  margin-right: 27px;
+  margin-left: 27px;
+
+  &--changed {
+    color: $white-100;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.causes__item:nth-of-type(4) .causes__text,
+.causes__item:nth-of-type(5) .causes__text {
+  @media (min-width: $tablet-width) {
+    margin-right: 52px;
+    margin-left: 52px;
+  }
+}
+
+/*
+
+.causes__item--big-box {
+  background-image: url("../../img/city.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 260px left;
+}
+
+.causes__item--medium-box {
+  background-image: url("../../img/bridge-rock.jpg");
+  padding-bottom: 260px;
+  background-repeat: no-repeat;
+  background-position: bottom 0px left;
+}
+
+*/
+
+.causes__item {
+  display: grid;
+  align-content: baseline;
+  gap: 14px;
+  background-color: $gray-100;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  min-height: 167px;
+  counter-increment: causes;
+
+  @media (max-width: $mobile-only) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: $gray-600;
+      bottom: 0;
+      right: 20px;
+      left: 20px;
+    }
+
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+
+  &::before {
+    text-align: center;
+    color: $black-100;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    content: "— №" counter(causes) "—";
+  }
+
+  &:nth-of-type(1),
+  &:nth-of-type(2) {
+    background-color: $white-100;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--small-box {
+    @media (min-width: $tablet-width) {
+      min-height: 256px;
+      width: 200px;
+      flex-grow: 1;
+      padding-top: 41px;
+      padding-bottom: 41px;
+    }
+  }
+}

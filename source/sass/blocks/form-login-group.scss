@@ -1,0 +1,11 @@
+.login-group__item {
+  margin-bottom: 20px;
+
+  &:first-of-type {
+    margin-top: 19px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+}

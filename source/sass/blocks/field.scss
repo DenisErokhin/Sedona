@@ -1,0 +1,75 @@
+.field__input {
+  font: inherit;
+  color: $black-200;
+  text-transform: none;
+  outline: none;
+  padding: 18px 22px 14px 22px;
+  background-color: $gray-200;
+  border: none;
+
+  &::placeholder {
+    color: $black-200;
+  }
+
+  &:hover {
+    background-color: $gray-300;
+  }
+
+  &:focus {
+    background-color: transparent;
+    outline: 4px solid $gray-300;
+    outline-offset: -4px;
+  }
+}
+
+.field__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: $black-100;
+  display: inline-block;
+}
+
+.field__label--tel,
+.field__label--email {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: $gray-250;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.field__label--tel {
+  margin-bottom: 8px;
+
+  &::before {
+    background-image: url("../../img/icon-phone.svg");
+  }
+}
+
+.field__label--email {
+  margin-bottom: 5px;
+
+  &::before {
+    background-image: url("../../img/icon-letter.svg");
+  }
+}
+
+.field__input--tel,
+.field__input--email {
+  width: 222px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 257px;
+  }
+}

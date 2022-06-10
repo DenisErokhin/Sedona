@@ -1,0 +1,89 @@
+.photos__list {
+  font-size: 14px;
+  line-height: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.photos__item {
+  border-top: 1px solid $gray-300;
+  padding-top: 22px;
+  padding-bottom: 15px;
+
+  &:first-of-type {
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid $gray-300;
+  }
+}
+
+.photos__img {
+  display: block;
+  background-color: $gray-100;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 267px;
+  }
+}
+
+.photos__item:first-of-type > .photos__img {
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.photos__name {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.photos__author {
+  font-weight: 400;
+  text-transform: none;
+  color: $black-100;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
+}
+
+.photos__likes {
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
+  position: relative;
+
+
+  &--icon::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    left: 0;
+    bottom: 6px;
+    background-image: url("../../img/like-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
