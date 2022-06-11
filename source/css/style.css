@@ -133,10 +133,28 @@ img {
       opacity: 0.3; }
   .main-nav--nojs .main-nav__button-close {
     display: none; }
-  .main-nav--closed .main-nav__button-close {
-    background-image: url("../img/icon-menu.svg"); }
-  .main-nav--opened .main-nav__button-close {
-    background-image: url("../img/icon-close.svg"); }
+  .main-nav--closed .main-nav__button-close::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    background-color: #81b3d2;
+    box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2; }
+  .main-nav--opened .main-nav__button-close::before, .main-nav--opened .main-nav__button-close::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 4px;
+    top: 10px;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: none; }
+  .main-nav--opened .main-nav__button-close::before {
+    transform: rotate(45deg); }
+  .main-nav--opened .main-nav__button-close::after {
+    transform: rotate(-45deg); }
   .main-nav--opened {
     position: absolute;
     top: 0;
@@ -146,10 +164,10 @@ img {
 .page-header__greeting {
   order: 3;
   padding-top: 90px;
-  padding-bottom: 84px;
+  padding-bottom: 85px;
   display: grid;
   justify-items: center;
-  background-color: gray;
+  background-color: #5496bd;
   background-image: url("../img/triangle-greetings.svg"), url("../img/montains-mobile.jpg");
   background-repeat: no-repeat;
   background-position: bottom -1px center, center;
@@ -157,9 +175,13 @@ img {
   @media (min-width: 768px) {
     .page-header__greeting {
       padding-top: 77px;
-      padding-bottom: 89px;
+      padding-bottom: 91px;
       background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-tablet.jpg");
       background-size: 1200px 57px, 1200px 518px; } }
+  @media (min-width: 1200px) {
+    .page-header__greeting {
+      padding-top: 78px;
+      padding-bottom: 90px; } }
 
 .page-header__greeting-img {
   width: 284px;
@@ -188,14 +210,17 @@ img {
   list-style: none;
   font-size: 18px;
   line-height: 40px;
-  margin: 0;
   padding: 0;
+  margin: 0;
   background-color: #81b3d2; }
   @media (min-width: 768px) {
     .main-nav__list {
       background-color: #ffffff;
       display: flex;
       flex-wrap: wrap; } }
+  @media (min-width: 1200px) {
+    .main-nav__list {
+      margin-bottom: -2px; } }
 
 @media (min-width: 768px) {
   .main-nav__item {
@@ -374,9 +399,6 @@ img {
 
 .causes__recommendations {
   margin: 0; }
-
-.causes {
-  margin-top: -1px; }
 
 .causes__slogan {
   margin: 0;
@@ -725,7 +747,8 @@ img {
   width: 100%;
   background-image: url("../../img/map.png");
   background-color: #eeeeee;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: top center; }
 
 .form-header__title {
   padding: 0;
