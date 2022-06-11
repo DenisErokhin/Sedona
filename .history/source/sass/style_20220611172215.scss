@@ -1,0 +1,53 @@
+// Global
+
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+
+// Blocks
+
+// Common styles pages
+
+@import "blocks/button.scss";
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logo-sedona.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/hashtag.scss";
+@import "blocks/socials.scss";
+@import "blocks/copyright.scss";
+
+// Index
+
+@import "blocks/index-main.scss";
+@import "blocks/causes.scss";
+@import "blocks/recommendations.scss";
+@import "blocks/search.scss";
+@import "blocks/map.scss";
+
+// Form
+
+@import "blocks/form-header.scss";
+@import "blocks/form-review.scss";
+@import "blocks/field.scss";
+@import "blocks/form-login-group";
+@import "blocks/form-contacts-group";
+@import "blocks/form-impression-group.scss";
+@import "blocks/form-attractions-group.scss";
+@import "blocks/form-feedback-group.scss";
+@import "blocks/checkbox.scss";
+@import "blocks/radio.scss";
+@import "blocks/checkbox-and-radio.scss";
+@import "blocks/popup.scss";
+@import "blocks/popup-mistake.scss";
+@import "blocks/popup-success.scss";
+
+// Catalog
+
+@import "blocks/catalog-header.scss";
+@import "blocks/photos";
+@import "blocks/video-gallery";
+@import "blocks/controls.scss";
+@import "blocks/page-main";
+@import "blocks/hide.scss";

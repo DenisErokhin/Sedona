@@ -1,0 +1,168 @@
+.page-header {
+  background-color: $white-100;
+  display: grid;
+}
+
+.page-header__logo {
+  @media (max-width: $mobile-only) {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transform: translateY(28px);
+    margin-top: -28px;
+    order: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 51px);
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
+
+  .main-nav--opened .main-nav__button-close,
+  .main-nav--closed .main-nav__button-close {
+    width: 23px;
+    height: 22px;
+    position: absolute;
+    border: none;
+    background-position: center;
+    background-color: inherit;
+    top: 17px;
+    right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .main-nav--nojs .main-nav__button-close {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__button-close {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 4px;
+      top: 0;
+      right: 0;
+      background-color: $blue-100;
+      box-shadow: 0 9px 0 0 $blue-100, 0 18px 0 0 $blue-100;
+    }
+  }
+
+  .main-nav--opened .main-nav__button-close {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 4px;
+      top: 10px;
+      right: 0;
+      background-color: $white-100;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.page-header__greeting,
+.page-header__title {
+  display: grid;
+  justify-items: center;
+  order: 3;
+  background-color: $blue-300;
+  background-repeat: no-repeat;
+}
+
+.page-header__greeting {
+  padding-top: 90px;
+  padding-bottom: 85px;
+  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile.jpg");
+  background-position: bottom -1px center, center;
+  background-size: 1200px 57px, 901px 389px;
+
+
+  @media (min-width: $tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 91px;
+    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet.jpg");
+    background-size: 1200px 57px, 1200px 518px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 78px;
+    padding-bottom: 90px;
+  }
+}
+
+.page-header__greeting-img {
+  width: 284px;
+  height: 214px;
+  display: block;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
+}
+
+.page-header__title {
+  padding-top: 52px;
+  padding-bottom: 67px;
+  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-mobile.jpg");
+  background-position: bottom -1px center, bottom center;
+
+  @media (min-width: $tablet-width) {
+
+  }
+}
+
+
+.page-header__title-img {
+  width: 229px;
+  height: 39px;
+  display: block;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+
+  @media (min-width)
+}
+

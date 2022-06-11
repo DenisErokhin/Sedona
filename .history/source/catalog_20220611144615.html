@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sedona</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page__body">
+  <div class="page__container">
+    <header class="page-header">
+      <a class="page-header__logo logo">
+        <img class="logo__img" src="img/sedona-logo.svg" width="102" height="84" alt="Логотип сайта Седона">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__button-close" type="button" aria-label="Закрыть меню">
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <!--  <div class="page-header__greeting">
+      <img class="page-header__greeting-img" src="img/sedona.svg" width="284" height="214"
+        alt="Добро пожаловать в Седону">
+    </div> -->
+    </header>
+    <main class="page-main main-catalog">
+      <header class="main-header catalog-header">
+        <h1 class="main-header__title catalog-header__title">Фото и видео</h1>
+        <p class="main-header__text catalog-header__text">Не можете решиться на путешествие из-за курса? Фотографии
+          помогут вам забыть о
+          политике и экономике.</p>
+      </header>
+      <section class="photos">
+        <h2 class="visually-hidden">Список фото</h2>
+        <ul class="photos__list photos__items">
+          <li class="photos__item">
+            <img class="photos__img" src="img/places-pictures/folk-spaces.jpg" width="280" height="280"
+              alt="Дорога в лесистой местности при закате солнца">
+            <p class="photos__name">Народные просторы</p>
+            <p class="photos__author">Автор фото: Борис</p>
+            <p class="photos__likes photos__likes--icon">1350</p>
+          </li>
+          <li class="photos__item">
+            <img class="photos__img" src="img/places-pictures/local-vegetation.jpg" width="280" height="280"
+              alt="Растение с колючками и желтыми и зелеными цветочками">
+            <p class="photos__name">Местная растительность</p>
+            <p class="photos__author">Автор фото: Сергей</p>
+            <p class="photos__likes photos__likes--icon">143</p>
+          </li>
+          <li class="photos__item">
+            <img class="photos__img" src="img/places-pictures/road-north.jpg" width="280" height="280"
+              alt="Дорога в горно-лесистой местности">
+            <p class="photos__name">Дорога на север</p>
+            <p class="photos__author">Автор фото: Петр</p>
+            <p class="photos__likes photos__likes--icon">96</p>
+          </li>
+          <li class="photos__item">
+            <img class="photos__img" src="img/places-pictures/bridge-devil.jpg" width="280" height="280"
+              alt="Мост из соединяющейся скалы над пропастью">
+            <p class="photos__name">Мост дьявола</p>
+            <p class="photos__author">Автор фото: Антон</p>
+            <p class="photos__likes photos__likes--icon">254</p>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__video-gallery video-gallery">
+        <h2 class="visually-hidden">Видеопрезентация</h2>
+        <p class="video-gallery__subtitle">Все еще сомневаетесь?</p>
+        <p class="video-gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной раз!</p>
+        <video class="video-gallery__video" width="320" height="201" poster="img/road-between-moutrains.jpg"></video>
+        <div class="video-gallery__controls controls">
+          <div class="controls__scale"></div>
+          <div class="controls__toogle" tabindex="0" aria-label="ползунок перемотки видео"></div>
+        </div>
+        <div class="video-gallery__toggles toggles">
+          <button class="toggles__restart toggle" type="button" aria-label="рестарт видео"></button>
+          <button class="toggles__subtitles toggle" type="button" aria-label="субтитры"></button>
+          <button class="toggles__fullscreen toggle" type="button" aria-label="полный экран"></button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <p class="page-footer__hashtag hashtag">#VisitSedona</p>
+      <ul class="page-footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link socials__link--twitter" href="https://twitter.com/" aria-label="Твиттер"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link socials__link--facebook" href="https://www.facebook.com/" aria-label="Фейсбук"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link socials__link--youtube" href="https://www.youtube.com/" aria-label="Ютуб"></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/" aria-label="html academy">
+          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
+              fill="black" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
