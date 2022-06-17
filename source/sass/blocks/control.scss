@@ -63,7 +63,7 @@
 
 .control__input--checkbox:checked + .control__label {
   &::after {
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
     width: 23px;
