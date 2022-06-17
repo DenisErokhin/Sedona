@@ -36,7 +36,7 @@
   margin-bottom: 8px;
 
   &::before {
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url("../img/icon-phone.svg");
   }
 }
 
@@ -44,7 +44,7 @@
   margin-bottom: 5px;
 
   &::before {
-    background-image: url("../../img/icon-letter.svg");
+    background-image: url("../img/icon-letter.svg");
   }
 
   @media (min-width: $desktop-width) {

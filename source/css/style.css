@@ -921,12 +921,12 @@ img {
 .field__label--tel {
   margin-bottom: 8px; }
   .field__label--tel::before {
-    background-image: url("../../img/icon-phone.svg"); }
+    background-image: url("../img/icon-phone.svg"); }
 
 .field__label--email {
   margin-bottom: 5px; }
   .field__label--email::before {
-    background-image: url("../../img/icon-letter.svg"); }
+    background-image: url("../img/icon-letter.svg"); }
   @media (min-width: 1200px) {
     .field__label--email {
       width: 147px; } }
