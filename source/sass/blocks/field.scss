@@ -6,6 +6,7 @@
   padding: 18px 22px 14px 22px;
   background-color: $gray-200;
   border: none;
+  width: 100%;
 
   &::placeholder {
     color: $black-200;
@@ -28,21 +29,7 @@
   line-height: 26px;
   color: $black-100;
   display: inline-block;
-}
-
-.field__label--tel,
-.field__label--email {
-  &::before {
-    content: "";
-    position: absolute;
-    width: 58px;
-    height: 58px;
-    background-color: $gray-250;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 0;
-    bottom: 0;
-  }
+  margin-right: 15px;
 }
 
 .field__label--tel {
@@ -59,17 +46,39 @@
   &::before {
     background-image: url("../../img/icon-letter.svg");
   }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
+  }
+}
+
+.field__label--tel,
+.field__label--email {
+  margin-left: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: $gray-250;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+    bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-right: 7px;
+  }
 }
 
 .field__input--tel,
 .field__input--email {
-  width: 222px;
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-  }
+  width: 100%;
 
   @media (min-width: $desktop-width) {
-    width: 257px;
+    width: 258px;
   }
 }

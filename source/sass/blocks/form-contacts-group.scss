@@ -1,34 +1,45 @@
 .contacts-group {
   @media (min-width: $desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    height: 200px;
   }
 }
 
 .contacts-group__item {
-  width: 280px;
   position: relative;
   margin-bottom: 14px;
   padding-right: 58px;
 
-  &:last-of-type {
-    margin-bottom: 28px;
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-    }
-  }
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 415px;
     display: flex;
-    align-items: end;
-    margin-bottom: 0;
+    align-items: center;
+  }
+
+  &:first-of-type {
+    @media (min-width: $tablet-width) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 25px;
+    }
   }
 }

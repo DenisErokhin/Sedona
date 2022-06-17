@@ -1,11 +1,29 @@
+.impression-group {
+  @media (min-width: $tablet-width) {
+    padding-right: 38px;
+  }
+}
+
 .impression-group__item {
   margin-bottom: 11px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
   &:first-of-type {
     margin-top: 20px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 60px;
+    }
   }
 
   &:last-of-type {
     margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }

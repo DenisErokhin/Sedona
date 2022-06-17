@@ -1,18 +1,16 @@
 .form-review {
   border-top: 2px solid $gray-200;
-  padding-top: 20px;
-  padding-bottom: 51px;
+  padding: 20px 20px 48px 20px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 0 60px 61px 60px;
+    border: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 120px;
-    padding-right: 120px;
+    padding: 0 120px 66px 120px;
   }
 }
 
@@ -23,50 +21,150 @@
   padding: 0;
   margin-bottom: 20px;
 
-  &:nth-of-type(3) {
-    margin-bottom: 15px;
-  }
-
   &:last-of-type {
     margin-bottom: 51px;
     border: none;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 58px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin-bottom: 0;
   }
 
   &--login {
     @media (min-width: $tablet-width) {
       grid-column: 2/3;
       grid-row: 1/2;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        background-color: $gray-450;
+        left: 0;
+        top: -26px;
+        bottom: 0;
+      }
     }
   }
 
   &--contacts {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
+      margin-top: 72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 70px;
     }
   }
 
   &--impression {
+    margin-bottom: 15px;
+
     @media (min-width: $tablet-width) {
       grid-column: 1/2;
       grid-row: 1/2;
+      margin-bottom: 0;
     }
   }
 
   &--attractions {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
+      margin-top: 51px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 26px;
     }
   }
 
   &--feedback {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
+      margin-top: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 41px;
+    }
+  }
+}
+
+.form-review__title {
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  &--impression,
+  &--login {
+    text-align: left;
+  }
+
+  &--attractions {
+    margin-bottom: 47px;
+  }
+
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 71px;
+    }
+  }
+
+  &--contacts,
+  &--attractions,
+  &--feedback {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        flex-grow: 1;
+        background-color: $gray-450;
+      }
+
+      &::before {
+        margin-right: 45px;
+      }
+
+      &::after {
+        margin-left: 45px;
+      }
     }
   }
 }
 
 .form-review__button {
   padding: 19px 33px 14px 32px;
-  display: inline-block;
   width: 100%;
+}
+
+.form-review__prompt {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: right;
+    align-self: center;
+    color: $black-100;
+    margin-left: 20px;
+  }
 }

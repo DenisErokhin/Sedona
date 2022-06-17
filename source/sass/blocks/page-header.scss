@@ -143,7 +143,6 @@
 .page-header__title {
   padding-top: 52px;
   padding-bottom: 67px;
-  margin-top: -1px;
   background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-mobile.jpg");
   background-position: bottom -1px center, bottom center;
 
@@ -155,8 +154,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 101px;
-    padding-bottom: 120px;
-    background-position: bottom -1px center, bottom center;
+    padding-bottom: 121px;
   }
 }
 
@@ -172,7 +170,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 460px;
+    width: 470px;
     height: 80px;
   }
 }

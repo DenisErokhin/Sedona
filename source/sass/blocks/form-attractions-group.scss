@@ -2,6 +2,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -9,12 +10,34 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    height: 200px;
+    column-gap: 0;
   }
 }
 
 .attractions-group__item {
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+
+    &:nth-of-type(odd) {
+      margin-left: 100px;
+    }
+
+    &:nth-of-type(even) {
+      margin-right: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-of-type(odd) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
 
   &:first-of-type {
     margin-top: 20px;

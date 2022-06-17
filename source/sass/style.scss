@@ -28,7 +28,6 @@
 
 // Form
 
-@import "blocks/form-header.scss";
 @import "blocks/form-review.scss";
 @import "blocks/field.scss";
 @import "blocks/form-login-group";
@@ -36,16 +35,11 @@
 @import "blocks/form-impression-group.scss";
 @import "blocks/form-attractions-group.scss";
 @import "blocks/form-feedback-group.scss";
-@import "blocks/checkbox.scss";
-@import "blocks/radio.scss";
-@import "blocks/checkbox-and-radio.scss";
+@import "blocks/control.scss";
 @import "blocks/popup.scss";
-@import "blocks/popup-mistake.scss";
-@import "blocks/popup-success.scss";
 
 // Catalog
 
-@import "blocks/catalog-header.scss";
 @import "blocks/photos";
 @import "blocks/video-gallery";
 @import "blocks/controls.scss";
@@ -54,4 +48,4 @@
 
 // Form and Catalog common styles
 
-@import "blocks/main-header.scss";
+@import "blocks/description.scss";

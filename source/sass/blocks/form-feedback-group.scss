@@ -1,12 +1,12 @@
 .feedback-group__textarea {
   margin: 0;
   margin-top: 15px;
-  padding: 13px 23px 29px 21px;
+  padding: 13px 17px 29px 21px;
   height: 160px;
-  min-width: 279px;
+  max-width: 100%;
   resize: none;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
+    margin-top: 54px;
   }
 }

@@ -43,10 +43,11 @@
           alt="Надпись белыми буквами Седона">
       </div>
     </header>
-    <main class="page-main main-form">
-      <header class="main-header form-header">
-        <h1 class="main-header__title form-header__title">Оставьте свой отзыв</h1>
-        <p class="main-header__text form-header__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также
+    <main class="page-main">
+      <header class="description">
+        <h1 class="description__title description__title--form">Оставьте свой отзыв</h1>
+        <p class="description__text description__text--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br> а
+          также
           о посещенных вами
           достопримечательностях</p>
       </header>
@@ -54,7 +55,7 @@
         <h2 class="visually-hidden">Напишите нам</h2>
         <form class="form-review" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-review__group form-review__group--login login-group">
-            <legend class="form-review__title">Представьтесь:</legend>
+            <legend class="form-review__title form-review__title--login">Представьтесь:</legend>
             <div class="field login-group__item">
               <label class="field__label" for="name">Имя<sup>*</sup>:</label>
               <input class="field__input" type="text" name="field-name" id="name" placeholder="Петр">
@@ -71,77 +72,80 @@
           </fieldset>
 
           <fieldset class="form-review__group form-review__group--contacts contacts-group">
-            <legend class="form-review__title">Контактная информация:</legend>
+            <legend class="form-review__title form-review__title--contacts">Контактная информация:</legend>
             <div class="field contacts-group__item">
-              <label class="field__label field__label--tel" for="tel"><span class="hide hide--tablet hide--desktop">Контактный</span>
+              <label class="field__label field__label--tel contacts-group__label" for="tel"><span
+                  class="hide hide--tablet hide--desktop">Контактный</span>
                 телефон<sup>*</sup>:</label>
-              <input class="field__input field__input--tel" type="tel" name="field-tel" id="tel"
+              <input class="field__input field__input--tel contacts-group__input" type="tel" name="field-tel" id="tel"
                 placeholder="Введите телефон">
             </div>
             <div class="field contacts-group__item">
-              <label class="field__label field__label--email" for="email">Электронная
+              <label class="field__label field__label--email contacts-group__label" for="email">Электронная
                 почта<sup>*</sup>:</label>
-              <input class="field__input field__input--email" type="email" name="field-email" id="email"
-                placeholder="Введите e-mail">
+              <input class="field__input field__input--email contacts-group__input" type="email" name="field-email"
+                id="email" placeholder="Введите e-mail">
             </div>
           </fieldset>
 
           <fieldset class="form-review__group form-review__group--impression impression-group">
-            <legend class="form-review__title">Ваше общее впечатление:</legend>
-            <div class="radio impression-group__item">
-              <input class="visually-hidden radio__input check-input" type="radio" name="general-impression"
+            <legend class="form-review__title form-review__title--impression">Ваше общее впечатление:</legend>
+            <div class="control impression-group__item">
+              <input class="visually-hidden control__input control__input--radio" type="radio" name="general-impression"
                 id="rather-positive" value="rather-positive" checked>
-              <label class="radio__label check-label" for="rather-positive">Скорее
+              <label class="control__label control__label--radio" for="rather-positive">Скорее
                 положительное</label>
             </div>
-            <div class="radio impression-group__item">
-              <input class="visually-hidden radio__input check-input" type="radio" name="general-impression"
+            <div class="control impression-group__item">
+              <input class="visually-hidden control__input control__input--radio" type="radio" name="general-impression"
                 id="rather-negative" value="rather-negative">
-              <label class="radio__label check-label" for="rather-negative">Скорее
+              <label class="control__label control__label--radio" for="rather-negative">Скорее
                 отрицательное</label>
             </div>
-            <div class="radio impression-group__item">
-              <input class="visually-hidden radio__input check-input" type="radio" name="general-impression"
+            <div class="control impression-group__item">
+              <input class="visually-hidden control__input control__input--radio" type="radio" name="general-impression"
                 id="difficult-answer" value="difficult-answer">
-              <label class="radio__label check-label" for="difficult-answer">Затрудняюсь
+              <label class="control__label control__label--radio" for="difficult-answer">Затрудняюсь
                 ответить</label>
             </div>
           </fieldset>
 
           <fieldset class="form-review__group form-review__group--attractions attractions-group">
-            <legend class="form-review__title">Посещенные достопримечательности:</legend>
-            <div class="checkbox attractions-group__item">
-              <input class="visually-hidden checkbox__input check-input" type="checkbox" name="visited-attractions"
+            <legend class="form-review__title form-review__title--attractions">Посещенные<br> достопримечательности:
+            </legend>
+            <div class="control attractions-group__item">
+              <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="visited-attractions"
                 id="devil-bridge" value="devil-bridge" checked>
-              <label class="checkbox__label check-label" for="devil-bridge">Мост
+              <label class="control__label control__label--checkbox" for="devil-bridge">Мост
                 Дьявола</label>
             </div>
-            <div class="checkbox attractions-group__item">
-              <input class="visually-hidden checkbox__input check-input" type="checkbox" name="visited-attractions"
+            <div class="control attractions-group__item">
+              <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="visited-attractions"
                 id="mountain-bell" value="mountain-bell" checked>
-              <label class="checkbox__label check-label" for="mountain-bell">Гора-Колокол</label>
+              <label class="control__label control__label--checkbox" for="mountain-bell">Гора-Колокол</label>
             </div>
-            <div class="checkbox attractions-group__item">
-              <input class="visually-hidden checkbox__input check-input" type="checkbox" name="visited-attractions"
+            <div class="control attractions-group__item">
+              <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="visited-attractions"
                 id="slide-park" value="slide-park" checked>
-              <label class="checkbox__label check-label" for="slide-park">Слайд-парк</label>
+              <label class="control__label control__label--checkbox" for="slide-park">Слайд-парк</label>
             </div>
-            <div class="checkbox attractions-group__item">
-              <input class="visually-hidden checkbox__input check-input" type="checkbox" name="visited-attractions"
+            <div class="control attractions-group__item">
+              <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="visited-attractions"
                 id="red-rocks" value="red-rocks">
-              <label class="checkbox__label check-label" for="red-rocks">Красные
+              <label class="control__label control__label--checkbox" for="red-rocks">Красные
                 скалы</label>
             </div>
           </fieldset>
 
           <fieldset class="form-review__group form-review__group--feedback feedback-group field">
-            <legend class="form-review__title">Опишите свои эмоции:</legend>
+            <legend class="form-review__title form-review__title--feedback">Опишите свои эмоции:</legend>
             <textarea class="feedback-group__textarea field__input" name="feedback-group__textarea"
               id="feedback-group__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
             <label class="visually-hidden feedback-group__label" for="feedback-group__textarea">Опишите свои
               эмоции</label>
           </fieldset>
           <button class="form-review__button button" type="submit">Отправить отзыв</button>
+          <p class="form-review__prompt"><sup>*</sup>-обязательные поля</p>
         </form>
       </section>
     </main>
@@ -170,20 +174,24 @@
         </a>
       </div>
     </footer>
-    <section class="popup-mistake popup">
+    <section class="popup popup--mistake">
       <h2 class="visually-hidden">Ошибка отправки формы</h2>
-      <p class="popup-mistake__subtitle popup__subtitle">Что-то пошло не так</p>
-      <p class="popup-mistake__text popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      <p class="popup__title popup__title--mistake">Что-то пошло<br> не так!</p>
+      <p class="popup__text popup__text--mistake">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="popup-mistake__button popup__button button">Ок</button>
+      <div class="popup__inner popup__inner--mistake">
+        <button class="popup__button popup__button--mistake button">Ок</button>
+      </div>
     </section>
-    <section class="popup-success popup">
+    <section class="popup popup--success">
       <h2 class="visually-hidden">Форма успешно отправлена</h2>
-      <p class="popup-success__subtitle popup__subtitle">Ваш отзыв отправлен!</p>
-      <p class="popup-success__text popup__text">Спасибо за ваше участие, наш отзыв уже поступил к нам. В ближайшее
+      <p class="popup__title popup__title--success">Ваш отзыв отправлен!</p>
+      <p class="popup__text popup__text--success">Спасибо за ваше участие, наш отзыв уже поступил к нам.<br> В ближайшее
         время
         мы опубликуем его на сайте.</p>
-      <button class="popup-success__button popup__button button">Закрыть окно</button>
+      <div class="popup__inner popup__inner--success">
+        <button class="popup__button popup__button--success button">Закрыть окно</button>
+      </div>
     </section>
   </div>
   <script>

@@ -1,11 +1,31 @@
+.login-group {
+  @media (min-width: $tablet-width) {
+    padding-left: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 79px;
+  }
+}
+
 .login-group__item {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 
   &:first-of-type {
     margin-top: 19px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 54px;
+    }
   }
 
   &:last-of-type {
     margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 }
