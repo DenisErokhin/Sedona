@@ -1,0 +1,108 @@
+.panel {
+  @media (min-width: $tablet-width) {
+    background-color: $black-opacity-04;
+    display: grid;
+    align-items: center;
+  }
+}
+
+.panel__box-range {
+  position: relative;
+  display: flex;
+  height: 45px;
+  margin-top: -45px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 22px;
+  padding-right: 22px;
+  background-color: $black-opacity-04;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 20px;
+    background-color: transparent;
+    position: absolute;
+    left: 93px;
+    right: 167px;
+  }
+}
+
+.panel__buttons {
+  height: 66px;
+  background-color: $gray-200;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 30px;
+    background-color: transparent;
+    margin: 0;
+  }
+}
+
+.panel__button {
+  width: 32px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover path {
+    fill: $black-100;
+  }
+
+  &:active path {
+    fill: $black-100;
+    fill-opacity: 0.3;
+  }
+
+  &--restart {
+    margin-left: 17px;
+  }
+
+  &--subtitles {
+    margin-left: auto;
+  }
+
+  &--fullscreen {
+    margin-left: 25px;
+    margin-right: 17px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .panel__button {
+    path {
+      fill: $white-100;
+    }
+
+    &:hover path {
+      fill: $white-100;
+      fill-opacity: 0.6;
+    }
+
+    &:active path {
+      fill: $white-100;
+      fill-opacity: 0.3;
+    }
+
+    &--restart {
+      margin-left: 27px;
+    }
+
+    &--fullscreen {
+      margin-right: 35px;
+    }
+  }
+}

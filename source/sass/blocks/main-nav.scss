@@ -15,10 +15,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: -2px;
-  }
 }
 
 .main-nav__item {

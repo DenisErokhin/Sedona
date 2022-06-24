@@ -3,6 +3,8 @@
 $white-100: #ffffff;
 $black-100: #333333;
 $black-200: #000000;
+$black-opacity-07: transparentize(#000000, 0.7);
+$black-opacity-04: transparentize(#000000, 0.4);
 $blue-100: #81b3d2;
 $blue-200: #669ec0;
 $blue-300: #5496bd;
@@ -10,6 +12,7 @@ $gray-100: #eeeeee;
 $gray-200: #f2f2f2;
 $gray-250: #e6e6e6;
 $gray-300: #e5e5e5;
+$gray-350: #eaeaea;
 $gray-400: #d5d5d5;
 $gray-450: #dbdbdb;
 $gray-500: #e7e5e5;

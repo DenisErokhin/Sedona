@@ -1,8 +1,13 @@
 .page-main__video-gallery {
-  max-width: 768px;
-  margin: 0 auto;
+  margin: 32px auto 49px auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 58px;
+    margin-bottom: 40px;
+  }
 
   @media (min-width: $desktop-width) {
-    max-width: 800px;
+    margin-top: 63px;
+    margin-bottom: 85px;
   }
 }

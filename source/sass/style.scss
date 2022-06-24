@@ -20,7 +20,6 @@
 
 // Index
 
-@import "blocks/index-main.scss";
 @import "blocks/causes.scss";
 @import "blocks/recommendations.scss";
 @import "blocks/search.scss";
@@ -37,14 +36,15 @@
 @import "blocks/form-feedback-group.scss";
 @import "blocks/control.scss";
 @import "blocks/popup.scss";
+@import "blocks/hide.scss";
 
 // Catalog
 
 @import "blocks/photos";
+@import "blocks/gallery-range.scss";
 @import "blocks/video-gallery";
-@import "blocks/controler.scss";
 @import "blocks/page-main";
-@import "blocks/hide.scss";
+@import "blocks/panel.scss";
 
 // Form and Catalog common styles
 

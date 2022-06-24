@@ -1,29 +1,46 @@
+.description--catalog {
+  padding-top: 31px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+    padding-bottom: 66px;
+  }
+}
+
+.description--form {
+  padding-top: 36px;
+  padding-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 113px;
+    padding-bottom: 56px;
+  }
+}
+
 .description__title {
   font-size: 18px;
   line-height: 26px;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 26px;
-  }
-
-  &--catalog {
-    margin: 0;
-    padding: 0;
-    margin-top: 31px;
-  }
-
-  &--form {
-    margin: 36px 14px 20px 14px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 65px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-top: 113px;
-    }
   }
 }
 
@@ -33,31 +50,16 @@
   line-height: 24px;
   color: $black-100;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-left: 14px;
+  margin-right: 14px;
 
-  &--catalog {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-
-  &--form {
-    padding: 0;
-    margin: 0 14px 16px 14px;
+  br {
+    display: none;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 66px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 56px;
-    }
-
-    br {
-      display: none;
-
-      @media (min-width: $tablet-width) {
-        display: block;
-      }
+      display: block;
     }
   }
 }
