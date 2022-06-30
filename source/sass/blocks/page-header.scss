@@ -102,75 +102,30 @@
   }
 }
 
-.page-header__greeting,
-.page-header__title {
+.page-header__main-welcome {
   display: grid;
   justify-items: center;
   order: 3;
   background-color: $blue-300;
   background-repeat: no-repeat;
-}
-
-.page-header__greeting {
-  padding-top: 90px;
-  padding-bottom: 85px;
-  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile.jpg");
-  background-position: bottom -1px center, center;
+  padding-top: 52px;
+  padding-bottom: 67px;
+  background-position: bottom center, center;
+  background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile.jpg");
   background-size: 1200px 57px, 901px 389px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile@2x.jpg");
-  }
-
-
-  @media (min-width: $tablet-width) {
-    padding-top: 77px;
-    padding-bottom: 91px;
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet.jpg");
-    background-size: 1200px 57px, 1200px 519px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet@2x.jpg");
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 78px;
-    padding-bottom: 90px;
-  }
-}
-
-.page-header__greeting-img {
-  width: 284px;
-  height: 214px;
-  display: block;
-  object-fit: cover;
-
-  @media (min-width: $tablet-width) {
-    width: 461px;
-    height: 350px;
-  }
-}
-
-.page-header__title {
-  padding-top: 52px;
-  padding-bottom: 67px;
-  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile.jpg");
-  background-position: bottom -1px center, bottom center;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile@2x.jpg");
-    background-size: 1200px 57px, 902px 214px;
+    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 95px;
     padding-bottom: 117px;
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet.jpg");
-    background-size: 1200px 57px, 1200px 518px;
+    background-size: 1200px 57px, 1200px 519px;
+    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet@2x.jpg");
+      background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-tablet@2x.jpg");
     }
   }
 
@@ -178,13 +133,41 @@
     padding-top: 101px;
     padding-bottom: 121px;
   }
+
+  &--index {
+    padding-top: 90px;
+    padding-bottom: 85px;
+    background-position: bottom -1px center, center;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 77px;
+      padding-bottom: 91px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 78px;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.page-header__greeting-img {
+  width: 284px;
+  height: 214px;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }
 
 .page-header__title-img {
   width: 229px;
   height: 39px;
-  display: block;
   object-fit: cover;
+  display: block;
 
   @media (min-width: $tablet-width) {
     width: 457px;
