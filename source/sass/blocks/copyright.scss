@@ -1,19 +1,16 @@
-.copyright {
-  display: flex;
-  align-items: center;
-}
-
 .copyright__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+  color: $black-200;
   margin: 0;
   padding: 0;
   margin-right: 10px;
 }
 
 .copyright__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   height: 35px;
 
   &:hover path {

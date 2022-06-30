@@ -109,6 +109,10 @@ img {
     top: 0;
     left: calc(50% - 51px); } }
 
+@media (min-width: 1200px) {
+  .page-header__logo {
+    left: calc(50% - 93px); } }
+
 @media (max-width: 767px) {
   .main-nav--closed .main-nav__list {
     display: none; }
@@ -175,12 +179,18 @@ img {
   background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile.jpg");
   background-position: bottom -1px center, center;
   background-size: 1200px 57px, 901px 389px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .page-header__greeting {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile@2x.jpg"); } }
   @media (min-width: 768px) {
     .page-header__greeting {
       padding-top: 77px;
       padding-bottom: 91px;
       background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet.jpg");
-      background-size: 1200px 57px, 1200px 520px; } }
+      background-size: 1200px 57px, 1200px 519px; } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-header__greeting {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet@2x.jpg"); } }
   @media (min-width: 1200px) {
     .page-header__greeting {
       padding-top: 78px;
@@ -200,13 +210,21 @@ img {
 .page-header__title {
   padding-top: 52px;
   padding-bottom: 67px;
-  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-mobile.jpg");
+  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile.jpg");
   background-position: bottom -1px center, bottom center; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .page-header__title {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile@2x.jpg");
+      background-size: 1200px 57px, 902px 214px; } }
   @media (min-width: 768px) {
     .page-header__title {
       padding-top: 95px;
       padding-bottom: 117px;
-      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-tablet.jpg"); } }
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet.jpg");
+      background-size: 1200px 57px, 1200px 518px; } }
+  @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+    .page-header__title {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet@2x.jpg"); } }
   @media (min-width: 1200px) {
     .page-header__title {
       padding-top: 101px;
@@ -235,6 +253,10 @@ img {
   background-color: transparent;
   width: 102px;
   height: 84px; }
+  @media (min-width: 1200px) {
+    .logo__img {
+      width: 187px;
+      height: 97px; } }
 
 .main-nav {
   cursor: pointer; }
@@ -395,20 +417,18 @@ img {
   .socials__link--youtube::before {
     background-image: url("../img/icon-youtube.svg"); }
 
-.copyright {
-  display: flex;
-  align-items: center; }
-
 .copyright__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+  color: #000000;
   margin: 0;
   padding: 0;
   margin-right: 10px; }
 
 .copyright__link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   height: 35px; }
   .copyright__link:hover path {
     fill: #81b3d2; }
@@ -514,7 +534,8 @@ img {
   background-color: #eeeeee;
   width: 800px;
   -o-object-fit: cover;
-     object-fit: cover; }
+     object-fit: cover;
+  height: 260px; }
 
 .causes__title {
   font-size: 18px;
@@ -541,19 +562,11 @@ img {
   font-size: 14px;
   line-height: 21px;
   margin: 0;
-  text-align: center;
-  margin-right: 27px;
-  margin-left: 27px; }
+  text-align: center; }
   .causes__text--changed {
     color: #ffffff;
     margin-right: 0;
     margin-left: 0; }
-
-@media (min-width: 768px) {
-  .causes__item:nth-of-type(4) .causes__text,
-  .causes__item:nth-of-type(5) .causes__text {
-    margin-right: 52px;
-    margin-left: 52px; } }
 
 /*
 
@@ -578,6 +591,8 @@ img {
   background-color: #eeeeee;
   padding-top: 25px;
   padding-bottom: 24px;
+  padding-left: 27px;
+  padding-right: 27px;
   min-height: 167px;
   counter-increment: causes; }
   @media (max-width: 767px) {
@@ -602,9 +617,14 @@ img {
     content: "— №" counter(causes) "—"; }
   .causes__item:nth-of-type(1), .causes__item:nth-of-type(2) {
     background-color: #ffffff;
-    padding: 0; }
+    padding: 0;
+    gap: 0; }
     .causes__item:nth-of-type(1)::before, .causes__item:nth-of-type(2)::before {
       display: none; }
+  @media (min-width: 768px) {
+    .causes__item:nth-of-type(4), .causes__item:nth-of-type(5) {
+      padding-left: 52px;
+      padding-right: 52px; } }
   @media (min-width: 768px) {
     .causes__item--small-box {
       min-height: 256px;
@@ -646,7 +666,13 @@ img {
       margin-bottom: 0;
       padding: 0;
       padding-top: 100px;
+      padding-left: 29px;
+      padding-right: 29px;
       margin-top: 20px; } }
+  @media (min-width: 1200px) {
+    .recommendations__item {
+      padding-right: 40px;
+      padding-left: 40px; } }
   .recommendations__item:last-of-type {
     margin-bottom: 0;
     margin-right: 40px; }
@@ -704,13 +730,7 @@ img {
   margin: 0; }
   @media (min-width: 768px) {
     .recommendations__desc {
-      margin-right: 29px;
-      margin-left: 29px;
       margin-top: 25px; } }
-  @media (min-width: 1200px) {
-    .recommendations__desc {
-      margin-right: 40px;
-      margin-left: 40px; } }
 
 .search {
   text-align: center;
@@ -767,7 +787,16 @@ img {
   background-image: url("../img/map.png");
   background-color: #eeeeee;
   background-repeat: no-repeat;
-  background-position: top center; }
+  background-position: top center;
+  background-size: 1200px 350px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .map {
+      background-image: url("../img/map@2x.png"); } }
+
+.map__iframe {
+  width: 100%;
+  border: none;
+  height: 350px; }
 
 .form-review {
   border-top: 2px solid #f2f2f2;

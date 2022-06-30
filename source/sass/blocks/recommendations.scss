@@ -31,7 +31,14 @@
     margin-bottom: 0;
     padding: 0;
     padding-top: 100px;
+    padding-left: 29px;
+    padding-right: 29px;
     margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   &:last-of-type {
@@ -119,13 +126,6 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    margin-right: 29px;
-    margin-left: 29px;
     margin-top: 25px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: 40px;
-    margin-left: 40px;
   }
 }

@@ -19,6 +19,10 @@
     top: 0;
     left: calc(50% - 51px);
   }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 93px);
+  }
 }
 
 @media (max-width: $mobile-only) {
@@ -114,12 +118,20 @@
   background-position: bottom -1px center, center;
   background-size: 1200px 57px, 901px 389px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-mobile@2x.jpg");
+  }
+
 
   @media (min-width: $tablet-width) {
     padding-top: 77px;
     padding-bottom: 91px;
     background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet.jpg");
-    background-size: 1200px 57px, 1200px 520px;
+    background-size: 1200px 57px, 1200px 519px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-greetings-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -143,13 +155,23 @@
 .page-header__title {
   padding-top: 52px;
   padding-bottom: 67px;
-  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-mobile.jpg");
+  background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile.jpg");
   background-position: bottom -1px center, bottom center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-mobile@2x.jpg");
+    background-size: 1200px 57px, 902px 214px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 95px;
     padding-bottom: 117px;
-    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-sedona-tablet.jpg");
+    background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet.jpg");
+    background-size: 1200px 57px, 1200px 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/triangle-greetings.svg"), url("../img/mountains-title-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {

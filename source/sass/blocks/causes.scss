@@ -124,6 +124,7 @@
   background-color: $gray-100;
   width: 800px;
   object-fit: cover;
+  height: 260px;
 }
 
 .causes__title {
@@ -159,21 +160,11 @@
   line-height: 21px;
   margin: 0;
   text-align: center;
-  margin-right: 27px;
-  margin-left: 27px;
 
   &--changed {
     color: $white-100;
     margin-right: 0;
     margin-left: 0;
-  }
-}
-
-.causes__item:nth-of-type(4) .causes__text,
-.causes__item:nth-of-type(5) .causes__text {
-  @media (min-width: $tablet-width) {
-    margin-right: 52px;
-    margin-left: 52px;
   }
 }
 
@@ -201,6 +192,8 @@
   background-color: $gray-100;
   padding-top: 25px;
   padding-bottom: 24px;
+  padding-left: 27px;
+  padding-right: 27px;
   min-height: 167px;
   counter-increment: causes;
 
@@ -235,9 +228,18 @@
   &:nth-of-type(2) {
     background-color: $white-100;
     padding: 0;
+    gap: 0;
 
     &::before {
       display: none;
+    }
+  }
+
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    @media (min-width: $tablet-width) {
+      padding-left: 52px;
+      padding-right: 52px;
     }
   }
 
