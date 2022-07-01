@@ -197,7 +197,7 @@
   min-height: 167px;
   counter-increment: causes;
 
-  @media (max-width: $mobile-only) {
+  @media (max-width: $mobile-width-only) {
     position: relative;
 
     &::after {

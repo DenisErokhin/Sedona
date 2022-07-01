@@ -4,7 +4,7 @@
 }
 
 .page-header__logo {
-  @media (max-width: $mobile-only) {
+  @media (max-width: $mobile-width-only) {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: $mobile-only) {
+@media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__list {
     display: none;
   }
@@ -110,7 +110,7 @@
   background-repeat: no-repeat;
   padding-top: 52px;
   padding-bottom: 67px;
-  background-position: bottom center, center;
+  background-position: bottom -1px center, center;
   background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile.jpg");
   background-size: 1200px 57px, 901px 389px;
 
@@ -137,7 +137,6 @@
   &--index {
     padding-top: 90px;
     padding-bottom: 85px;
-    background-position: bottom -1px center, center;
 
     @media (min-width: $tablet-width) {
       padding-top: 77px;

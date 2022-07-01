@@ -137,7 +137,6 @@
       &::after {
         content: "";
         height: 1px;
-        display: block;
         flex-grow: 1;
         background-color: $gray-450;
       }
@@ -167,16 +166,12 @@
 }
 
 .form-review__prompt {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: right;
-    align-self: center;
-    color: $black-100;
-    margin-left: 20px;
-  }
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: right;
+  align-self: center;
+  color: $black-100;
+  margin-left: 20px;
 }

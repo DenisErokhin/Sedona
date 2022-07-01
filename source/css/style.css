@@ -173,7 +173,7 @@ img {
   background-repeat: no-repeat;
   padding-top: 52px;
   padding-bottom: 67px;
-  background-position: bottom center, center;
+  background-position: bottom -1px center, center;
   background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile.jpg");
   background-size: 1200px 57px, 901px 389px; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
@@ -194,8 +194,7 @@ img {
       padding-bottom: 121px; } }
   .page-header__main-welcome--index {
     padding-top: 90px;
-    padding-bottom: 85px;
-    background-position: bottom -1px center, center; }
+    padding-bottom: 85px; }
     @media (min-width: 768px) {
       .page-header__main-welcome--index {
         padding-top: 77px;
@@ -881,7 +880,6 @@ img {
       .form-review__title--contacts::before, .form-review__title--contacts::after, .form-review__title--attractions::before, .form-review__title--attractions::after, .form-review__title--feedback::before, .form-review__title--feedback::after {
         content: "";
         height: 1px;
-        display: block;
         flex-grow: 1;
         background-color: #dbdbdb; }
       .form-review__title--contacts::before, .form-review__title--attractions::before, .form-review__title--feedback::before {
@@ -901,17 +899,14 @@ img {
       margin-right: 0; } }
 
 .form-review__prompt {
-  display: none; }
-  @media (min-width: 768px) {
-    .form-review__prompt {
-      display: block;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 26px;
-      text-align: right;
-      align-self: center;
-      color: #333333;
-      margin-left: 20px; } }
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: right;
+  align-self: center;
+  color: #333333;
+  margin-left: 20px; }
 
 .field__input {
   font: inherit;
@@ -1256,6 +1251,10 @@ img {
 
 @media (min-width: 1200px) {
   .hide--desktop {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .show--tablet {
     display: none; } }
 
 .photos__list {
