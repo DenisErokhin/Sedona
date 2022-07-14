@@ -1,5 +1,5 @@
 .video-gallery {
-  max-width: 320px;
+  max-width: 100%;
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -16,8 +16,8 @@
 }
 
 .video-gallery__img {
-  height: 201px;
-  width: 320px;
+  min-height: 201px;
+  width: 100%;
   display: block;
   object-fit: cover;
 
@@ -40,11 +40,12 @@
 
 .video-gallery__subtitle {
   text-align: center;
-  margin: 0 26px 20px 26px;
+  margin: 0 26px 28px 26px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 26px;
+    margin-bottom: 33px;
   }
 }
 
@@ -65,7 +66,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
+    margin-bottom: 79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
   }
 }
 

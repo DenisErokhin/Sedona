@@ -1,6 +1,6 @@
 .form-review {
   border-top: 2px solid $gray-200;
-  padding: 20px 0 48px 0;
+  padding: 20px 0 38px 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -24,11 +24,11 @@
   padding-right: 20px;
 
   &:last-of-type {
-    margin-bottom: 51px;
+    margin-bottom: 44px;
     border: none;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 58px;
+      margin-bottom: 51px;
     }
   }
 
@@ -50,9 +50,13 @@
         position: absolute;
         width: 1px;
         background-color: $gray-450;
-        left: 0;
+        left: -1px;
         top: -26px;
         bottom: 0;
+
+        @media (min-width: $desktop-width) {
+          left: 0;
+        }
       }
     }
   }
@@ -60,11 +64,11 @@
   &--contacts {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
-      margin-top: 72px;
+      margin-top: 73px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 70px;
+      margin-top: 71px;
     }
   }
 
@@ -81,22 +85,22 @@
   &--attractions {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
-      margin-top: 51px;
+      margin-top: 52px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 26px;
+      margin-top: 27px;
     }
   }
 
   &--feedback {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
-      margin-top: 50px;
+      margin-top: 38px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 41px;
+      margin-top: 36px;
     }
   }
 }
@@ -109,13 +113,23 @@
     line-height: 26px;
   }
 
-  &--impression,
-  &--login {
-    text-align: left;
+  &--login,
+  &--impression {
+    @media (min-width: $tablet-width) {
+      text-align: left;
+    }
+  }
+
+  &--impression {
+    @media (min-width: $desktop-width) {
+      text-align: center;
+    }
   }
 
   &--attractions {
-    margin-bottom: 47px;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 44px;
+    }
   }
 
   &--contacts {
@@ -142,18 +156,40 @@
       }
 
       &::before {
-        margin-right: 45px;
+        margin-right: 62px;
       }
 
       &::after {
-        margin-left: 45px;
+        margin-left: 62px;
+      }
+    }
+  }
+
+  &--contacts,
+  &--feedback {
+    @media (min-width: $tablet-width) {
+      &::before,
+      &::after {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &--feedback {
+    @media (min-width: $tablet-width) {
+      &::before {
+        margin-right: 76px;
+      }
+
+      &::after {
+        margin-left: 76px;
       }
     }
   }
 }
 
 .form-review__button {
-  padding: 19px 33px 14px 32px;
+  padding: 19px 33px 13px 30px;
   width: calc(100% - 40px);
   margin-left: 20px;
   margin-right: 20px;
@@ -162,6 +198,11 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding-left: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 21px;
   }
 }
 
@@ -173,5 +214,10 @@
   text-align: right;
   align-self: center;
   color: $black-100;
-  margin-left: 20px;
+  margin-left: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-top: 6px;
+  }
 }

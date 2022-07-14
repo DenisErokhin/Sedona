@@ -1,24 +1,36 @@
 .copyright__text {
+  max-width: 150px;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   color: $black-200;
   margin: 0;
   padding: 0;
-  margin-right: 10px;
+  margin-right: 12px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+  }
 }
 
 .copyright__link {
   display: flex;
   align-items: center;
-  height: 35px;
+  min-height: 35px;
+  fill: $black-200;
 
-  &:hover path {
+  &:hover {
     fill: $blue-100;
   }
 
-  &:active path {
+  &:active {
     fill: $black-200;
-    opacity: 0.3;
+    fill-opacity: 0.3;
   }
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 35px;
 }

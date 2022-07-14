@@ -17,11 +17,8 @@
     display: block;
     position: absolute;
     top: 0;
-    left: calc(50% - 51px);
-  }
-
-  @media (min-width: $desktop-width) {
-    left: calc(50% - 93px);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -37,7 +34,7 @@
   .main-nav--opened .main-nav__button-close,
   .main-nav--closed .main-nav__button-close {
     width: 23px;
-    height: 22px;
+    height: 23px;
     position: absolute;
     border: none;
     background-position: center;
@@ -77,10 +74,10 @@
     &::after {
       content: "";
       position: absolute;
-      width: 25px;
+      width: 28px;
       height: 4px;
-      top: 10px;
-      right: 0;
+      top: 9px;
+      right: -3px;
       background-color: $white-100;
       box-shadow: none;
     }
@@ -110,23 +107,18 @@
   background-repeat: no-repeat;
   padding-top: 52px;
   padding-bottom: 67px;
-  background-position: bottom -1px center, center;
-  background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile.jpg");
+  background-position: bottom center, bottom center;
+  background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background.jpg");
   background-size: 1200px 57px, 901px 389px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-mobile@2x.jpg");
+    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background@2x.jpg");
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 95px;
     padding-bottom: 117px;
     background-size: 1200px 57px, 1200px 519px;
-    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-tablet@2x.jpg");
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -151,30 +143,34 @@
 }
 
 .page-header__greeting-img {
-  width: 284px;
+  width: 282px;
   height: 214px;
   object-fit: cover;
   display: block;
 
   @media (min-width: $tablet-width) {
-    width: 461px;
+    width: 462px;
     height: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 461px;
   }
 }
 
 .page-header__title-img {
-  width: 229px;
+  width: 230px;
   height: 39px;
   object-fit: cover;
   display: block;
 
   @media (min-width: $tablet-width) {
-    width: 457px;
+    width: 459px;
     height: 78px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 470px;
-    height: 80px;
+    width: 463px;
+    height: 79px;
   }
 }

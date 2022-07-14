@@ -1,10 +1,10 @@
 .search {
+  padding: 32px 20px 49px 20px;
   text-align: center;
-  padding: 33px 20px 49px 20px;
 
   @media (min-width: $tablet-width) {
     min-height: 318px;
-    padding-top: 57px;
+    padding-top: 56px;
     padding-bottom: 58px;
   }
 
@@ -19,11 +19,15 @@
   line-height: 26px;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     line-height: 26px;
+    max-width: 520px;
+    margin-bottom: 34px;
   }
 }
 
@@ -34,14 +38,17 @@
   color: $black-100;
   margin: 0;
   padding: 0;
-  margin-bottom: 27px;
+  margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 37px;
+    margin-bottom: 38px;
+    max-width: 520px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 42px;
+    margin-bottom: 43px;
   }
 
   br {
@@ -53,8 +60,8 @@
   }
 }
 
-.search__button {
-  padding: 15px 15px 18px 15px;
+.search__link {
+  padding: 15px 15px 17px 15px;
   width: 100%;
   max-width: 458px;
 }

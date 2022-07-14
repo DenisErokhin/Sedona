@@ -18,9 +18,9 @@ input[type="range"].gallery-range::-webkit-slider-runnable-track {
 }
 
 input[type="range"].gallery-range::-webkit-slider-thumb {
-  margin-top: -5px;
-  width: 13px;
-  height: 13px;
+  margin-top: -3px;
+  width: 9px;
+  height: 9px;
   background: #ffffff;
   border: 0 solid rgba(255, 255, 255, 0);
   border-radius: 50px;
@@ -41,8 +41,8 @@ input[type="range"].gallery-range::-moz-range-track {
 }
 
 input[type="range"].gallery-range::-moz-range-thumb {
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   background: #ffffff;
   border: 0 solid rgba(255, 255, 255, 0);
   border-radius: 50px;
@@ -70,8 +70,8 @@ input[type="range"].gallery-range::-ms-fill-upper {
 }
 
 input[type="range"].gallery-range::-ms-thumb {
-  width: 13px;
-  height: 13px;
+  width: 9px;
+  height: 9px;
   background: #ffffff;
   border: 0 solid rgba(255, 255, 255, 0);
   border-radius: 50px;

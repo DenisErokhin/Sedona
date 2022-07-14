@@ -3,6 +3,7 @@
   align-items: center;
   position: relative;
   text-transform: none;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -13,27 +14,39 @@
   }
 
   &--checkbox {
-    min-height: 46px;
+    min-height: 55px;
     padding-left: 79px;
 
     &::before {
-      width: 46px;
-      height: 46px;
+      width: 55px;
+      height: 55px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 80px;
     }
   }
 
   &--radio {
-    min-height: 48px;
+    min-height: 55px;
     padding-left: 78px;
 
     &::before {
-      width: 48px;
-      height: 48px;
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
+
+      @media (min-width: $desktop-width) {
+        left: 5px;
+      }
     }
 
     @media (min-width: $tablet-width) {
-      padding-left: 81px;
+      padding-left: 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 79px;
     }
   }
 }
@@ -66,10 +79,14 @@
     background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 23px;
+    width: 24px;
     height: 17px;
-    left: 12px;
-    top: 16px;
+    left: 16px;
+    top: 19px;
+
+    @media (min-width: $desktop-width) {
+      left: 17px;
+    }
   }
 }
 
@@ -77,10 +94,14 @@
   &::after {
     background-color: $black-100;
     border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    left: 15px;
-    top: 15px;
+    width: 21px;
+    height: 21px;
+    left: 17px;
+    top: 17px;
+
+    @media (min-width: $desktop-width) {
+      left: 22px;
+    }
   }
 }
 

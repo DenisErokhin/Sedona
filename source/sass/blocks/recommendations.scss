@@ -30,9 +30,9 @@
     text-align: center;
     margin-bottom: 0;
     padding: 0;
-    padding-top: 100px;
-    padding-left: 29px;
-    padding-right: 29px;
+    padding-top: 101px;
+    padding-left: 32px;
+    padding-right: 32px;
     margin-top: 20px;
   }
 
@@ -57,10 +57,10 @@
   &::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 38px;
-    top: -9px;
-    left: 18px;
+    width: 45px;
+    height: 45px;
+    top: -12px;
+    left: 17px;
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
@@ -69,7 +69,7 @@
       top: 0;
       right: 0;
       left: 0;
-      width: 76px;
+      width: 80px;
       height: 75px;
       background-size: contain;
       background-position: center;
@@ -79,12 +79,42 @@
   &--house {
     &::before {
       background-image: url("../img/icon-house.svg");
+      background-position: left 4px top 3px;
+
+      @media (min-width: $tablet-width) {
+        background-position: left 2px top 3px;
+        background-size: 75px 72px;
+      }
+
+      @media (min-width: $desktop-width) {
+        background-position: left 1px top 2px;
+        background-size: 75px 73px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @media (min-width: $desktop-width) {
+        display: block;
+      }
     }
   }
 
   &--souvenirs {
     &::before {
       background-image: url("../img/icon-gift.svg");
+      background-position: left 8px top 1px;
+
+      @media (min-width: $tablet-width) {
+        background-position: left 7px top 0;
+        background-size: 64px 75px;
+      }
+
+      @media (min-width: $desktop-width) {
+        background-position: left 7px top 0;
+        background-size: 63px 75px;
+      }
     }
 
     br {
@@ -99,6 +129,17 @@
   &--food {
     &::before {
       background-image: url("../img/icon-burger.svg");
+      background-position: top 7px left 1px;
+
+      @media (min-width: $tablet-width) {
+        background-position: left 1px top 6px;
+        background-size: 76px 68px;
+      }
+
+      @media (min-width: $desktop-width) {
+        background-position: left 1px top 6px;
+        background-size: 76px 69px;
+      }
     }
 
     br {
@@ -112,6 +153,8 @@
 }
 
 .recommendations__term {
+  margin-bottom: 16px;
+
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;
@@ -126,6 +169,6 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    margin-top: 25px;
+    margin-top: 23px;
   }
 }

@@ -1,18 +1,17 @@
 .causes__slogan {
-  margin: 0;
-  margin-top: 32px;
   text-align: center;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 33px 27px 30px 25px;
+
 
   br {
     display: none;
   }
 
   @media (min-width: $tablet-width) {
+    max-width: 520px;
     font-size: 21px;
     line-height: 26px;
-    margin-top: 44px;
+    margin: 45px auto 30px auto;
 
     br {
       display: block;
@@ -20,7 +19,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 55px;
+    margin-top: 56px;
+    padding-right: 2px;
   }
 }
 
@@ -31,16 +31,19 @@
   line-height: 26px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 11px;
+  margin-bottom: 33px;
   margin-right: 20px;
   margin-left: 20px;
 
   @media (min-width: $tablet-width) {
+    max-width: 520px;
     margin-bottom: 53px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
@@ -75,7 +78,7 @@
 .causes__inner {
   background-color: $blue-100;
   display: grid;
-  align-content: space-between;
+
 
   &::before {
     text-align: center;
@@ -92,8 +95,7 @@
 
   background-repeat: no-repeat;
   background-position: top -21px center;
-  padding: 55px 10px 39px 10px;
-  min-height: 211px;
+  padding: 50px 10px 39px 10px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -101,7 +103,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 47px 52px 56px 52px;
+    padding: 48px 52px 56px 52px;
   }
 }
 
@@ -125,6 +127,12 @@
   width: 800px;
   object-fit: cover;
   height: 260px;
+
+
+  @media (min-width: $tablet-width) {
+    min-height: 256px;
+    height: 100%;
+  }
 }
 
 .causes__title {
@@ -134,6 +142,7 @@
   padding: 0;
   text-align: center;
   order: -1;
+  margin-bottom: 12px;
 
   br {
     display: none;
@@ -160,11 +169,32 @@
   line-height: 21px;
   margin: 0;
   text-align: center;
+  margin-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 23px;
+  }
 
   &--changed {
     color: $white-100;
     margin-right: 0;
     margin-left: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-top: 22px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.causes__item:nth-of-type(4) .causes__text {
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -188,12 +218,11 @@
 .causes__item {
   display: grid;
   align-content: baseline;
-  gap: 14px;
   background-color: $gray-100;
-  padding-top: 25px;
-  padding-bottom: 24px;
-  padding-left: 27px;
-  padding-right: 27px;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  padding-left: 35px;
+  padding-right: 35px;
   min-height: 167px;
   counter-increment: causes;
 
@@ -215,6 +244,14 @@
     }
   }
 
+  @media (min-width: $tablet-width) {
+    min-height: 256px;
+    width: 200px;
+    flex-grow: 1;
+    padding-top: 43px;
+    padding-bottom: 41px;
+  }
+
   &::before {
     text-align: center;
     color: $black-100;
@@ -228,10 +265,18 @@
   &:nth-of-type(2) {
     background-color: $white-100;
     padding: 0;
-    gap: 0;
 
-    &::before {
+    &::before,
+    &::after {
       display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      height: min-content;
+      width: 100%;
+      flex-grow: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -240,16 +285,6 @@
     @media (min-width: $tablet-width) {
       padding-left: 52px;
       padding-right: 52px;
-    }
-  }
-
-  &--small-box {
-    @media (min-width: $tablet-width) {
-      min-height: 256px;
-      width: 200px;
-      flex-grow: 1;
-      padding-top: 41px;
-      padding-bottom: 41px;
     }
   }
 }

@@ -19,9 +19,9 @@
     <header class="page-header">
       <a class="page-header__logo logo">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/sedona-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/sedona-logo-tablet.svg">
-          <img class="logo__img" src="img/sedona-logo.svg" width="102" height="84" alt="Логотип сайта Седона">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="logo__img" src="img/logo-sedona.svg" width="102" height="84" alt="Логотип сайта Седона">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -38,7 +38,7 @@
             <a class="main-nav__link" href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru">Html Academy</a>
           </li>
         </ul>
       </nav>
@@ -54,14 +54,18 @@
         <p class="causes__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
         <p class="causes__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ol class="causes__list">
-          <li class="causes__item causes__item--big-box">
+          <li class="causes__item">
             <div class="causes__wrapper causes__wrapper--top">
               <div class="causes__inner causes__inner--top">
                 <h3 class="causes__title causes__title--changed">Настоящий<br> городок</h3>
-                <!--  <p class="causes__number number">— №1 —</p> -->
-                <p class="causes__text causes__text--changed">Седона не атракцион для туристов, там течет своя жизнь</p>
+                <p class="causes__text causes__text--changed">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/city-desktop.webp 1x, img/city-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/city-tablet.webp 1x, img/city-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/city-mobile.webp 1x, img/city-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/city-desktop.jpg 1x, img/city-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/city-tablet.jpg 1x, img/city-tablet@2x.jpg 2x">
                 <img class="causes__img" src="img/city-mobile.jpg" srcset="img/city-mobile@2x.jpg 2x" width="520"
@@ -71,7 +75,7 @@
             <dl class="causes__recommendations recommendations">
               <div class="recommendations__item recommendations__item--house">
                 <dt class="recommendations__term">Жилье</dt>
-                <dd class="recommendations__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</dd>
+                <dd class="recommendations__desc">Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</dd>
               </div>
               <div class="recommendations__item recommendations__item--souvenirs">
                 <dt class="recommendations__term">Сувениры</dt>
@@ -83,14 +87,18 @@
               </div>
             </dl>
           </li>
-          <li class="causes__item causes__item--medium-box">
+          <li class="causes__item">
             <div class="causes__wrapper  causes__wrapper--bottom">
               <div class="causes__inner causes__inner--bottom">
                 <h3 class="causes__title causes__title--changed">Там есть<br> мост дьявола</h3>
-                <!--  <p class="causes__number number">— №2 —</p> -->
                 <p class="causes__text causes__text--changed">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/bridge-rock-desktop.webp 1x, img/bridge-rock-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/bridge-rock-tablet.webp 1x, img/bridge-rock-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/bridge-rock-mobile.webp 1x, img/bridge-rock-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)"
                   srcset="img/bridge-rock-desktop.jpg 1x, img/bridge-rock-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
@@ -100,19 +108,16 @@
               </picture>
             </div>
           </li>
-          <li class="causes__item causes__item--small-box">
+          <li class="causes__item">
             <h3 class="causes__title">Небольшая<br> площадь</h3>
-            <!--  <p class="causes__number number">— №3 —</p> -->
-            <p class="causes__text">Все интересные места находяться очень близко</p>
+            <p class="causes__text">Все интересные места находятся очень близко</p>
           </li>
-          <li class="causes__item causes__item--small-box">
+          <li class="causes__item">
             <h3 class="causes__title">Красивая<br> дорога</h3>
-            <!-- <p class="causes__number number">— №4 —</p> -->
-            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
           </li>
-          <li class="causes__item causes__item--small-box">
+          <li class="causes__item">
             <h3 class="causes__title">Мало<br> туристов</h3>
-            <!-- <p class="causes__number number">— №5 —</p> -->
             <p class="causes__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
@@ -122,12 +127,12 @@
         <p class="search__subtitle">Заинтересовались?</p>
         <p class="search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в
           Седоне</p>
-        <button class="search__button button">Найти гостиницу</button>
+        <a href="#" class="search__link button">Найти гостиницу</a>
       </section>
       <div class="map">
         <iframe class="map__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499722.25202960667!2d-112.13898664194832!3d34.63128612298185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1656583971332!5m2!1sru!2s"
-          allowfullscreen=""></iframe>
+          height="350" allowfullscreen=""></iframe>
       </div>
     </main>
     <footer class="page-footer">
@@ -144,12 +149,10 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/" aria-label="html academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="html academy">
           <p class="copyright__text">Разработано</p>
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-              fill="black" />
+          <svg class="copyright__logo" width="27" height="35">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>

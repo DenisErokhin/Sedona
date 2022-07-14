@@ -17,11 +17,11 @@
 <body class="page__body">
   <div class="page__container">
     <header class="page-header">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo logo" href="index.html">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/sedona-logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/sedona-logo-tablet.svg">
-          <img class="logo__img" src="img/sedona-logo.svg" width="102" height="84" alt="Логотип сайта Седона">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="logo__img" src="img/logo-sedona.svg" width="102" height="84" alt="Логотип сайта Седона">
         </picture>
       </a>
       <nav class="main-nav  main-nav--closed main-nav--nojs">
@@ -38,7 +38,7 @@
             <a class="main-nav__link main-nav__link--current">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru/">Html Academy</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru">Html Academy</a>
           </li>
         </ul>
       </nav>
@@ -62,15 +62,15 @@
           <fieldset class="form-review__group form-review__group--login login-group">
             <legend class="form-review__title form-review__title--login">Представьтесь:</legend>
             <div class="field login-group__item">
-              <label class="field__label" for="name">Имя<sup>*</sup>:</label>
+              <label class="field__label field__label--name" for="name">Имя*:</label>
               <input class="field__input" type="text" name="field-name" id="name" placeholder="Петр">
             </div>
             <div class="field login-group__item">
-              <label class="field__label" for="surname">Фамилия<sup>*</sup>:</label>
+              <label class="field__label field__label--surname" for="surname">Фамилия*:</label>
               <input class="field__input" type="text" name="field-surname" id="surname" placeholder="Иванов">
             </div>
             <div class="field login-group__item">
-              <label class="field__label" for="patronymic">Отчество<sup>*</sup>:</label>
+              <label class="field__label field__label--patronymic" for="patronymic">Отчество:</label>
               <input class="field__input" type="text" name="field-patronymic" placeholder="Александрович"
                 id="patronymic">
             </div>
@@ -81,13 +81,13 @@
             <div class="field contacts-group__item">
               <label class="field__label field__label--tel contacts-group__label" for="tel"><span
                   class="hide hide--tablet hide--desktop">Контактный</span>
-                телефон<sup>*</sup>:</label>
+                телефон*:</label>
               <input class="field__input field__input--tel contacts-group__input" type="tel" name="field-tel" id="tel"
                 placeholder="Введите телефон">
             </div>
             <div class="field contacts-group__item">
               <label class="field__label field__label--email contacts-group__label" for="email">Электронная
-                почта<sup>*</sup>:</label>
+                почта*:</label>
               <input class="field__input field__input--email contacts-group__input" type="email" name="field-email"
                 id="email" placeholder="Введите e-mail">
             </div>
@@ -150,7 +150,7 @@
               эмоции</label>
           </fieldset>
           <button class="form-review__button button" type="submit">Отправить отзыв</button>
-          <p class="form-review__prompt show show--tablet"><sup>*</sup>-обязательные поля</p>
+          <p class="form-review__prompt show show--tablet">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -169,12 +169,10 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/" aria-label="html academy">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="html academy">
           <p class="copyright__text">Разработано</p>
-          <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"
-              fill="black" />
+          <svg class="copyright__logo" width="27" height="35">
+            <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
       </div>
@@ -192,7 +190,7 @@
     <section class="popup popup--success">
       <h2 class="visually-hidden">Форма успешно отправлена</h2>
       <p class="popup__title popup__title--success">Ваш отзыв отправлен!</p>
-      <p class="popup__text popup__text--success">Спасибо за ваше участие, наш отзыв уже поступил к нам.<br> В ближайшее
+      <p class="popup__text popup__text--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее
         время
         мы опубликуем его на сайте.</p>
       <div class="popup__inner popup__inner--success">

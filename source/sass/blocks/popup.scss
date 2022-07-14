@@ -1,9 +1,16 @@
 .popup {
+  width: 320px;
+  position: fixed;
+  background-color: $white-100;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
 }
 
 .popup--mistake {
-  padding: 40px 42px 35px 41px;
+  padding: 40px 41px 35px 41px;
 
   br {
     display: none;
@@ -11,8 +18,7 @@
 
   @media (min-width: $tablet-width) {
     width: 400px;
-    min-height: 347px;
-    padding: 51px 47px 49px 46px;
+    padding: 50px 47px 49px 47px;
 
     br {
       display: block;
@@ -25,8 +31,7 @@
 
   @media (min-width: $tablet-width) {
     width: 640px;
-    min-height: 347px;
-    padding-top: 54px;
+    padding-top: 46px;
   }
 }
 
@@ -50,6 +55,14 @@
       margin-right: 98px;
     }
   }
+
+  &--mistake {
+    margin-bottom: 26px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .popup__text {
@@ -62,20 +75,20 @@
   padding: 0;
 
   &--mistake {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 27px;
+      margin-bottom: 38px;
     }
   }
 
   &--success {
-    margin-bottom: 21px;
+    margin-bottom: 40px;
     margin-left: 37px;
     margin-right: 39px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 31px;
+      margin-bottom: 42px;
       margin-left: 98px;
       margin-right: 98px;
     }
@@ -92,6 +105,14 @@
 }
 
 .popup__button {
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
   &--success {
     padding: 18px 20px 14px 20px;
     width: 100%;

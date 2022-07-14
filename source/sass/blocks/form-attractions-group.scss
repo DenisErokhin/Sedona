@@ -2,26 +2,26 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    column-gap: 62px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 0;
+    grid-template-columns: repeat(4, 204px);
+    grid-auto-flow: row;
+    align-items: start;
+    column-gap: 48px;
+    row-gap: 20px;
   }
 }
 
 .attractions-group__item {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 32px;
+    margin-bottom: 33px;
 
     &:nth-of-type(odd) {
-      margin-left: 100px;
+      margin-left: 96px;
     }
 
     &:nth-of-type(even) {
@@ -30,24 +30,28 @@
   }
 
   @media (min-width: $desktop-width) {
-    &:nth-of-type(odd) {
+    &:nth-of-type(odd),
+    &:nth-of-type(even) {
+      margin-right: 0;
       margin-left: 0;
     }
 
-    &:nth-of-type(even) {
-      margin-right: 0;
+    &:nth-of-type(3),
+    &:nth-of-type(7),
+    &:nth-of-type(11) {
+      margin-left: 13px;
     }
   }
 
   &:first-of-type {
-    margin-top: 20px;
+    margin-top: 21px;
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
     }
-  }
 
-  &:last-of-type {
-    margin-bottom: 25px;
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
   }
 }

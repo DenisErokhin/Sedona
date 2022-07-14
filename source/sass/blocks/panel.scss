@@ -57,12 +57,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  fill: $gray-650;
 
-  &:hover path {
+  &:hover {
     fill: $black-100;
   }
 
-  &:active path {
+  &:active {
     fill: $black-100;
     fill-opacity: 0.3;
   }
@@ -83,16 +84,15 @@
 
 @media (min-width: $tablet-width) {
   .panel__button {
-    path {
-      fill: $white-100;
-    }
+    fill: $white-100;
+    margin-bottom: 2px;
 
-    &:hover path {
+    &:hover {
       fill: $white-100;
       fill-opacity: 0.6;
     }
 
-    &:active path {
+    &:active {
       fill: $white-100;
       fill-opacity: 0.3;
     }
@@ -103,6 +103,25 @@
 
     &--fullscreen {
       margin-right: 35px;
+
+      @media (min-width: $desktop-width) {
+        margin-right: 37px;
+      }
     }
   }
+}
+
+.panel__icon-restart {
+  width: 16px;
+  height: 20px;
+}
+
+.panel__icon-subtitles {
+  width: 32px;
+  height: 20px;
+}
+
+.panel__icon-fullscreen {
+  width: 20px;
+  height: 20px;
 }
