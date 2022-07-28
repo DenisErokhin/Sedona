@@ -7,7 +7,7 @@
   <title>Sedona</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -61,6 +61,10 @@
           <li class="photos__item">
             <a class="photos__link" href="img/places-pictures/folk-spaces-tablet.jpg" target="_blank">
               <picture>
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="img/places-pictures/folk-spaces-tablet.webp 1x, img/places-pictures/folk-spaces-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/places-pictures/folk-spaces-mobile.webp 1x, img/places-pictures/folk-spaces-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/places-pictures/folk-spaces-tablet.jpg 1x, img/places-pictures/folk-spaces-tablet@2x.jpg 2x">
                 <img class="photos__img" src="img/places-pictures/folk-spaces-mobile.jpg"
@@ -85,6 +89,10 @@
           <li class="photos__item">
             <a class="photos__link" href="img/places-pictures/local-vegetation-tablet.jpg" target="_blank">
               <picture>
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="img/places-pictures/local-vegetation-tablet.webp 1x, img/places-pictures/local-vegetation-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/places-pictures/local-vegetation-mobile.webp 1x,
+                  img/places-pictures/local-vegetation-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/places-pictures/local-vegetation-tablet.jpg 1x, img/places-pictures/local-vegetation-tablet@2x.jpg 2x">
                 <img class="photos__img" src="img/places-pictures/local-vegetation-mobile.jpg"
@@ -109,6 +117,10 @@
           <li class="photos__item">
             <a class="photos__link" href="img/places-pictures/road-north-tablet.jpg" target="_blank">
               <picture>
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="img/places-pictures/road-north-tablet.webp 1x, img/places-pictures/road-north-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/places-pictures/road-north-mobile.webp 1x, img/places-pictures/road-north-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/places-pictures/road-north-tablet.jpg 1x, img/places-pictures/road-north-tablet@2x.jpg 2x">
                 <img class="photos__img" src="img/places-pictures/road-north-mobile.jpg"
@@ -133,6 +145,10 @@
           <li class="photos__item">
             <a class="photos__link" href="img/places-pictures/bridge-devil-tablet.jpg" target="_blank">
               <picture>
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="img/places-pictures/bridge-devil-tablet.webp 1x, img/places-pictures/bridge-devil-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/places-pictures/bridge-devil-mobile.webp 1x, img/places-pictures/bridge-devil-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/places-pictures/bridge-devil-tablet.jpg 1x, img/places-pictures/bridge-devil-tablet@2x.jpg 2x">
                 <img class="photos__img" src="img/places-pictures/bridge-devil-mobile.jpg"
@@ -162,10 +178,7 @@
         <p class="video-gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в
           очередной раз!</p>
         <picture>
-          <!--
-          <source media="(min-width: 768px)"
-            srcset="img/road-mountains-tablet.jpg 1x, img/road-mountains-tablet@2x.jpg 2x">
-            -->
+          <source type="image/webp" srcset="img/road-mountains.webp 1x, img/road-mountains@2x.webp 2x">
           <img class="video-gallery__img" src="img/road-mountains.jpg" srcset="img/road-mountains@2x.jpg 2x" width="320"
             height="201" alt="дорога между гор с движением машин">
         </picture>
@@ -182,17 +195,17 @@
           <div class="panel__buttons">
             <button class="panel__button panel__button--restart" type="button" aria-label="рестарт видео">
               <svg class="panel__icon-restart" width="16" height="20">
-                <use xlink:href="img/sprite.svg#restart"></use>
+                <use xlink:href="img/sprite.svg#icon-restart"></use>
               </svg>
             </button>
             <button class="panel__button panel__button--subtitles" type="button" aria-label="субтитры">
               <svg class="panel__icon-subtitles" width="32" height="20">
-                <use xlink:href="img/sprite.svg#subtitles"></use>
+                <use xlink:href="img/sprite.svg#icon-subtitles"></use>
               </svg>
             </button>
             <button class="panel__button panel__button--fullscreen" type="button" aria-label="полный экран">
               <svg class="panel__icon-fullscreen" width="20" height="20">
-                <use xlink:href="img/sprite.svg#fullscreen"></use>
+                <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
               </svg>
             </button>
           </div>
@@ -222,22 +235,7 @@
       </div>
     </footer>
   </div>
-  <script>
-    const mainNav = document.querySelector(".main-nav");
-    const mainNavButton = mainNav.querySelector(".main-nav__button-close");
-
-    mainNav.classList.remove("main-nav--nojs");
-
-    mainNavButton.addEventListener("click", function () {
-      if (mainNav.classList.contains("main-nav--closed")) {
-        mainNav.classList.remove("main-nav--closed");
-        mainNav.classList.add("main-nav--opened");
-      } else {
-        mainNav.classList.add("main-nav--closed");
-        mainNav.classList.remove("main-nav--opened");
-      }
-    })
-  </script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
