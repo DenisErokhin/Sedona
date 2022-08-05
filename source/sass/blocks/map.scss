@@ -1,17 +1,14 @@
 .map {
   height: 350px;
   width: 100%;
-  background-image: url("../img/map.png");
+  background: url("../img/map.png") no-repeat top center;
   background-color: $gray-100;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 1200px 350px;
+  background-size: cover;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/map@2x.png");
   }
 }
-
 .map__iframe {
   width: 100%;
   border: none;

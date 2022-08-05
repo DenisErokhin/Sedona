@@ -1,39 +1,37 @@
 .recommendations {
-  padding: 0;
-  padding-top: 35px;
+  padding-top: 23px;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    min-height: 330px;
-    padding-top: 37px;
-    padding-bottom: 59px;
     align-items: baseline;
+    min-height: 330px;
+    padding-top: 57px;
+    padding-bottom: 29px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 80px;
+    padding-bottom: 50px;
   }
 }
 
 .recommendations__item {
-  margin-bottom: 26px;
-  padding-left: 70px;
-  padding-right: 11px;
   position: relative;
   text-align: left;
+  padding: 12px 11px 0 70px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     width: 230px;
     flex-grow: 1;
     text-align: center;
-    margin-bottom: 0;
-    padding: 0;
-    padding-top: 101px;
-    padding-left: 32px;
-    padding-right: 32px;
-    margin-top: 20px;
+    padding: 101px 32px 0;
+    margin-bottom: 30px;
+
+    &:nth-of-type(2) {
+      order: 1;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -50,29 +48,21 @@
     }
   }
 
-  &:nth-of-type(2) {
-    order: 1;
-  }
-
   &::before {
     content: "";
     position: absolute;
     width: 45px;
     height: 45px;
-    top: -12px;
+    top: 0;
     left: 17px;
     background-repeat: no-repeat;
+    background-position: center;
 
     @media (min-width: $tablet-width) {
-      margin-left: auto;
-      margin-right: auto;
-      top: 0;
-      right: 0;
-      left: 0;
       width: 80px;
       height: 75px;
-      background-size: contain;
-      background-position: center;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -88,7 +78,6 @@
 
       @media (min-width: $desktop-width) {
         background-position: left 1px top 2px;
-        background-size: 75px 73px;
       }
     }
 
@@ -110,11 +99,6 @@
         background-position: left 7px top 0;
         background-size: 64px 75px;
       }
-
-      @media (min-width: $desktop-width) {
-        background-position: left 7px top 0;
-        background-size: 63px 75px;
-      }
     }
 
     br {
@@ -135,11 +119,6 @@
         background-position: left 1px top 6px;
         background-size: 76px 68px;
       }
-
-      @media (min-width: $desktop-width) {
-        background-position: left 1px top 6px;
-        background-size: 76px 69px;
-      }
     }
 
     br {
@@ -158,6 +137,7 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     line-height: 26px;
+    margin-bottom: 23px;
   }
 }
 
@@ -167,8 +147,4 @@
   line-height: 21px;
   font-weight: 400;
   margin: 0;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 23px;
-  }
 }

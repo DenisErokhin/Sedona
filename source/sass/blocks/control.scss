@@ -76,17 +76,11 @@
 
 .control__input--checkbox:checked + .control__label {
   &::after {
-    background-image: url("../img/tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url("../img/tick.svg") no-repeat center;
     width: 24px;
     height: 17px;
     left: 16px;
     top: 19px;
-
-    @media (min-width: $desktop-width) {
-      left: 17px;
-    }
   }
 }
 

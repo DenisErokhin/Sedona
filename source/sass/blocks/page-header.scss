@@ -5,10 +5,10 @@
 
 .page-header__logo {
   @media (max-width: $mobile-width-only) {
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
     transform: translateY(28px);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -28px;
     order: 2;
   }
@@ -37,7 +37,6 @@
     height: 23px;
     position: absolute;
     border: none;
-    background-position: center;
     background-color: inherit;
     top: 17px;
     right: 20px;
@@ -100,77 +99,5 @@
 }
 
 .page-header__main-welcome {
-  display: grid;
-  justify-items: center;
   order: 3;
-  background-color: $blue-300;
-  background-repeat: no-repeat;
-  padding-top: 52px;
-  padding-bottom: 67px;
-  background-position: bottom center, bottom center;
-  background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background.jpg");
-  background-size: 1200px 57px, 901px 389px;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background@2x.jpg");
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 95px;
-    padding-bottom: 117px;
-    background-size: 1200px 57px, 1200px 519px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 101px;
-    padding-bottom: 121px;
-  }
-
-  &--index {
-    padding-top: 90px;
-    padding-bottom: 85px;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 77px;
-      padding-bottom: 91px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 78px;
-      padding-bottom: 90px;
-    }
-  }
-}
-
-.page-header__greeting-img {
-  width: 282px;
-  height: 214px;
-  object-fit: cover;
-  display: block;
-
-  @media (min-width: $tablet-width) {
-    width: 462px;
-    height: 350px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 461px;
-  }
-}
-
-.page-header__title-img {
-  width: 230px;
-  height: 39px;
-  object-fit: cover;
-  display: block;
-
-  @media (min-width: $tablet-width) {
-    width: 459px;
-    height: 78px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 463px;
-    height: 79px;
-  }
 }

@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Седона, город для отдыха, мост дьявола, дорога на север">
+  <meta name="description" content="Cедона - небольшой городок для отдыха">
   <title>Sedona</title>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff2" crossorigin>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -35,19 +40,19 @@
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Форма отзыва</a>
+            <a class="main-nav__link main-nav__link--current" href="#">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="https://htmlacademy.ru">Html Academy</a>
           </li>
         </ul>
       </nav>
-      <div class="page-header__main-welcome">
-        <img class="page-header__title-img" src="img/sedona-title.svg" width="229" height="39"
+      <div class="page-header__main-welcome main-welcome">
+        <img class="main-welcome__img--title" src="img/sedona-title.svg" width="229" height="39"
           alt="Надпись белыми буквами Седона">
       </div>
     </header>
-    <main class="page-main">
+    <main>
       <header class="description description--form">
         <h1 class="description__title description__title--form">Оставьте свой отзыв</h1>
         <p class="description__text description__text--form">Помогите нашим отелям стать лучше! Оставьте отзыв о
@@ -150,7 +155,7 @@
               эмоции</label>
           </fieldset>
           <button class="form-review__button button" type="submit">Отправить отзыв</button>
-          <p class="form-review__prompt show show--tablet">* — обязательные поля</p>
+          <p class="form-review__advice show show--tablet">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -198,7 +203,7 @@
       </div>
     </section>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

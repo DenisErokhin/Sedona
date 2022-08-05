@@ -1,17 +1,12 @@
 .causes__slogan {
   text-align: center;
-  margin: 33px 27px 30px 25px;
-
-
-  br {
-    display: none;
-  }
+  margin: 33px 25px 30px;
 
   @media (min-width: $tablet-width) {
     max-width: 520px;
     font-size: 21px;
     line-height: 26px;
-    margin: 45px auto 30px auto;
+    margin: 45px auto 30px;
 
     br {
       display: block;
@@ -20,26 +15,20 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 56px;
-    padding-right: 2px;
   }
 }
 
 .causes__desc {
-  margin: 0;
   color: $black-100;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 33px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 20px 33px;
 
   @media (min-width: $tablet-width) {
     max-width: 520px;
-    margin-bottom: 53px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 53px;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,9 +38,9 @@
 
 .causes__list {
   list-style: none;
+  counter-reset: causes;
   margin: 0;
   padding: 0;
-  counter-reset: causes;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -60,74 +49,69 @@
 }
 
 .causes__wrapper {
-  &--top {
-    @media (min-width: $tablet-width) {
-      display: grid;
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    &--top {
       grid-template-columns: 1fr 2fr;
     }
-  }
 
-  &--bottom {
-    @media (min-width: $tablet-width) {
-      display: grid;
+    &--bottom {
       grid-template-columns: 2fr 1fr;
     }
   }
 }
 
 .causes__inner {
-  background-color: $blue-100;
   display: grid;
-
+  color: $white-100;
+  background-color: $blue-100;
 
   &::before {
     text-align: center;
-    color: $white-100;
-    font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    font-weight: 400;
     content: "— №" counter(causes) "—";
   }
 }
 
 .causes__inner--top {
   background-image: url("../../img/triangle-cause.svg");
-
   background-repeat: no-repeat;
   background-position: top -21px center;
-  padding: 50px 10px 39px 10px;
+  padding: 50px 10px 39px;
 
   @media (min-width: $tablet-width) {
     background-image: none;
-    padding: 40px 32px 43px 32px;
+    padding: 40px 32px 43px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 48px 52px 56px 52px;
+    padding: 48px 52px 56px;
   }
 }
 
 .causes__inner--bottom {
   min-height: 191px;
-  padding: 39px 15px 35px 15px;
+  padding: 39px 15px 35px;
 
   @media (min-width: $tablet-width) {
     order: 2;
-    padding: 43px 36px 41px 36px;
+    padding: 43px 36px 41px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 51px 73px 52px 73px;
+    padding: 51px 73px;
   }
 }
 
 .causes__img {
   display: block;
-  background-color: $gray-100;
   width: 800px;
-  object-fit: cover;
   height: 260px;
-
+  background-color: $gray-100;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     min-height: 256px;
@@ -138,11 +122,9 @@
 .causes__title {
   font-size: 18px;
   line-height: 26px;
-  margin: 0;
-  padding: 0;
   text-align: center;
+  margin: 0 0 12px;
   order: -1;
-  margin-bottom: 12px;
 
   br {
     display: none;
@@ -150,7 +132,6 @@
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    line-height: 26px;
 
     br {
       display: block;
@@ -158,18 +139,13 @@
   }
 }
 
-.causes__title--changed {
-  color: $white-100;
-}
-
 .causes__text {
   color: $black-100;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
   text-align: center;
-  margin-top: 16px;
+  margin: 16px 0 0;
 
   @media (min-width: $tablet-width) {
     margin-top: 23px;
@@ -177,13 +153,9 @@
 
   &--changed {
     color: $white-100;
-    margin-right: 0;
-    margin-left: 0;
 
     @media (min-width: $desktop-width) {
-      margin-top: 22px;
-      margin-right: 10px;
-      margin-left: 10px;
+      margin: 22px 10px 0;
     }
   }
 }
@@ -198,32 +170,11 @@
   }
 }
 
-/*
-
-.causes__item--big-box {
-  background-image: url("../../img/city.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom 260px left;
-}
-
-.causes__item--medium-box {
-  background-image: url("../../img/bridge-rock.jpg");
-  padding-bottom: 260px;
-  background-repeat: no-repeat;
-  background-position: bottom 0px left;
-}
-
-*/
-
 .causes__item {
   display: grid;
   align-content: baseline;
   background-color: $gray-100;
-  padding-top: 26px;
-  padding-bottom: 25px;
-  padding-left: 35px;
-  padding-right: 35px;
-  min-height: 167px;
+  padding: 26px 35px 25px;
   counter-increment: causes;
 
   @media (max-width: $mobile-width-only) {
@@ -239,8 +190,13 @@
       left: 20px;
     }
 
-    &:last-of-type::after {
-      display: none;
+    &:first-of-type,
+    &:nth-of-type(2),
+    &:last-of-type {
+
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -249,15 +205,15 @@
     width: 200px;
     flex-grow: 1;
     padding-top: 43px;
-    padding-bottom: 41px;
+    padding-bottom: 42px;
   }
 
   &::before {
     text-align: center;
-    color: $black-100;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    color: $black-100;
     content: "— №" counter(causes) "—";
   }
 
@@ -266,8 +222,7 @@
     background-color: $white-100;
     padding: 0;
 
-    &::before,
-    &::after {
+    &::before {
       display: none;
     }
 
@@ -275,8 +230,6 @@
       height: min-content;
       width: 100%;
       flex-grow: 0;
-      padding-top: 0;
-      padding-bottom: 0;
     }
   }
 

@@ -1,14 +1,9 @@
-.main-nav {
-  cursor: pointer;
-}
-
 .main-nav__list {
   list-style: none;
   font-size: 18px;
   line-height: 40px;
   padding: 0;
   margin: 0;
-
 
   @media (min-width: $tablet-width) {
     background-color: $white-100;
@@ -18,6 +13,8 @@
 }
 
 .main-nav__item {
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     width: 20%;
 
@@ -30,37 +27,29 @@
 }
 
 .main-nav__link {
-  color: $white-100;
-  margin: 0;
-  padding: 0;
-  padding-top: 10px;
-  padding-bottom: 6px;
-  padding-left: 50px;
-  padding-right: 50px;
   display: block;
   text-align: center;
+  color: $white-100;
   background-color: $blue-100;
-  box-shadow: 0 -1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -1px 0 rgba($black-200, 0.2), inset 0 1px 0 rgba($white-100, 0.2);
+  padding: 10px 50px 6px;
 
   &:hover {
     background-color: $blue-200;
   }
 
   &:active {
-    color: transparentize($white-100, 0.7);
+    color: rgba($white-100, 0.3);
     background-color: $blue-300;
   }
 
   @media (min-width: $tablet-width) {
-    color: $black-200;
     font-size: 14px;
     line-height: 26px;
+    color: $black-200;
     background-color: $white-100;
     box-shadow: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 15px 10px;
 
     &:hover {
       color: $blue-100;
@@ -68,8 +57,7 @@
     }
 
     &:active {
-      color: transparentize($black-200, 0.7);
-      background-color: inherit;
+      color: rgba($black-200, 0.3);
     }
   }
 }
@@ -83,14 +71,14 @@
     }
 
     &:active {
-      color: transparentize($brown-100, 0.7);
+      color: rgba($brown-100, 0.3);
     }
   }
 }
 
 @media (max-width: $mobile-width-only) {
   .main-nav__item:first-of-type .main-nav__link {
-    box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+    box-shadow: 0 1px 0 rgba($black-200, 0.2);
   }
 
   .main-nav__item:last-of-type .main-nav__link {
@@ -103,7 +91,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+      background: linear-gradient(180deg, rgba($black-200, 0) 0%, rgba($black-200, 0.2) 100%);
     }
   }
 }

@@ -1,0 +1,70 @@
+.main-welcome {
+  display: grid;
+  justify-items: center;
+  background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background.jpg");
+  background-position: bottom center;
+  background-color: $blue-300;
+  background-repeat: no-repeat;
+  background-size: 1200px 57px, 901px 389px;
+  padding-top: 52px;
+  padding-bottom: 67px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/triangle-main-welcome.svg"), url("../img/mountains-background@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-size: 1200px 57px, 1200px 519px;
+    padding-top: 95px;
+    padding-bottom: 117px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 101px;
+    padding-bottom: 121px;
+  }
+
+  &--index {
+    padding-top: 90px;
+    padding-bottom: 85px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 77px;
+      padding-bottom: 91px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 78px;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.main-welcome__img--greeting {
+  width: 282px;
+  height: 214px;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 462px;
+    height: 350px;
+  }
+}
+
+.main-welcome__img--title {
+  width: 230px;
+  height: 39px;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 459px;
+    height: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 463px;
+    height: 79px;
+  }
+}

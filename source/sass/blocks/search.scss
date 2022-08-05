@@ -1,6 +1,5 @@
 .search {
-  padding: 32px 20px 49px 20px;
-  text-align: center;
+  padding: 32px 20px 49px;
 
   @media (min-width: $tablet-width) {
     min-height: 318px;
@@ -17,11 +16,8 @@
 .search__subtitle {
   font-size: 21px;
   line-height: 26px;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 21px;
+  text-align: center;
+  margin: 0 auto 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -35,16 +31,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  text-align: center;
   color: $black-100;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 28px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 29px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 38px;
     max-width: 520px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: $desktop-width) {
@@ -61,7 +54,9 @@
 }
 
 .search__link {
-  padding: 15px 15px 17px 15px;
-  width: 100%;
+  display: block;
   max-width: 458px;
+  padding: 15px 15px 17px;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,43 +1,39 @@
 .panel {
   @media (min-width: $tablet-width) {
-    background-color: $black-opacity-04;
+    background-color: rgba($black-200, 0.6);
     display: grid;
     align-items: center;
   }
 }
 
 .panel__box-range {
-  position: relative;
   display: flex;
+  position: relative;
   height: 45px;
-  margin-top: -45px;
-  margin-left: 20px;
-  margin-right: 20px;
+  background-color: rgba($black-200, 0.6);
+  margin: -45px 20px 0;
   padding-left: 22px;
   padding-right: 22px;
-  background-color: $black-opacity-04;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    position: absolute;
     height: 20px;
     background-color: transparent;
-    position: absolute;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     left: 93px;
-    right: 167px;
+    right: 166px;
   }
 }
 
 .panel__buttons {
+  display: flex;
+  align-items: center;
   height: 66px;
   background-color: $gray-200;
   margin-right: 20px;
   margin-left: 20px;
-  display: flex;
-  align-items: center;
 
   @media (min-width: $tablet-width) {
     height: 30px;
@@ -50,7 +46,6 @@
   width: 32px;
   height: 30px;
   padding: 0;
-  margin: 0;
   border: none;
   background-color: transparent;
   display: flex;
@@ -111,17 +106,19 @@
   }
 }
 
-.panel__icon-restart {
-  width: 16px;
-  height: 20px;
-}
+.panel__icon {
+  &--restart {
+    width: 16px;
+    height: 20px;
+  }
 
-.panel__icon-subtitles {
-  width: 32px;
-  height: 20px;
-}
+  &--subtitles {
+    width: 32px;
+    height: 20px;
+  }
 
-.panel__icon-fullscreen {
-  width: 20px;
-  height: 20px;
+  &--fullscreen {
+    width: 20px;
+    height: 20px;
+  }
 }

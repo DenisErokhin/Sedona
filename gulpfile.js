@@ -45,9 +45,8 @@ const html = () => {
 // JavaScript
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/*.js")
     .pipe(jsmin())
-    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream())
 }
@@ -105,6 +104,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff,woff2}",
+    "source/css/normalize.css",
     "source/*.ico",
     "source/*.webmanifest",
     "source/img/**/*.svg",
@@ -177,7 +177,7 @@ exports.build = build;
 exports.default = gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
     html,
     styles,

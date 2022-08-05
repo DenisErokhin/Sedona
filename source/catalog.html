@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Седона, город для отдыха, мост дьявола, дорога на север">
+  <meta name="description" content="Cедона - небольшой городок для отдыха">
   <title>Sedona</title>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff2" crossorigin>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -32,7 +37,7 @@
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Фото и видео</a>
+            <a class="main-nav__link main-nav__link--current" href="#">Фото и видео</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Форма отзыва</a>
@@ -42,12 +47,12 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__main-welcome">
-        <img class="page-header__title-img" src="img/sedona-title.svg" width="229" height="39"
+      <div class="page-header__main-welcome main-welcome">
+        <img class="main-welcome__img main-welcome__img--title" src="img/sedona-title.svg" width="229" height="39"
           alt="Надпись белыми буквами Седона">
       </div>
     </header>
-    <main class="page-main main-catalog">
+    <main class="page__main catalog-main">
       <header class="description description--catalog">
         <h1 class="description__title description__title--catalog">Фото и видео</h1>
         <p class="description__text description__text--catalog">Не можете решиться на путешествие из-за курса?<br>
@@ -61,14 +66,10 @@
           <li class="photos__item">
             <a class="photos__link" href="img/places-pictures/folk-spaces-tablet.jpg" target="_blank">
               <picture>
-                <source media="(min-width: 768px)" type="image/webp"
-                  srcset="img/places-pictures/folk-spaces-tablet.webp 1x, img/places-pictures/folk-spaces-tablet@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/places-pictures/folk-spaces-mobile.webp 1x, img/places-pictures/folk-spaces-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/places-pictures/folk-spaces-tablet.jpg 1x, img/places-pictures/folk-spaces-tablet@2x.jpg 2x">
-                <img class="photos__img" src="img/places-pictures/folk-spaces-mobile.jpg"
-                  srcset="img/places-pictures/folk-spaces-mobile@2x.jpg 2x" width="280" height="280"
+                  srcset="img/places-pictures/folk-spaces.webp 1x, img/places-pictures/folk-spaces@2x.webp 2x">
+                  <img class="photos__img" src="img/places-pictures/folk-spaces.jpg"
+                  srcset="img/places-pictures/folk-spaces@2x.jpg 2x" width="280" height="280"
                   alt="Дорога в лесистой местности при закате солнца">
               </picture>
             </a>
@@ -76,12 +77,11 @@
               <p class="photos__name">Неродные просторы</p>
               <p class="photos__author">Автор фото: Борис</p>
               <div class="photos__inner">
-                <svg class="photos__icon-likes" width="23" height="21" viewBox="0 0 23 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3"
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                    fill="black" />
-                </svg>
+                <button class="photos__button-likes" type="button">
+                  <svg class="photos__likes" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <p class="photos__number-likes">1350</p>
               </div>
             </div>
@@ -104,12 +104,11 @@
               <p class="photos__name">Местная растительность</p>
               <p class="photos__author">Автор фото: Сергей</p>
               <div class="photos__inner">
-                <svg class="photos__icon-likes" width="23" height="21" viewBox="0 0 23 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3"
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                    fill="black" />
-                </svg>
+                <button class="photos__button-likes" type="button">
+                  <svg class="photos__likes" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <p class="photos__number-likes">143</p>
               </div>
             </div>
@@ -132,12 +131,11 @@
               <p class="photos__name">Дорога на север</p>
               <p class="photos__author">Автор фото: Петр</p>
               <div class="photos__inner">
-                <svg class="photos__icon-likes" width="23" height="21" viewBox="0 0 23 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3"
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                    fill="black" />
-                </svg>
+                <button class="photos__button-likes" type="button">
+                  <svg class="photos__likes" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <p class="photos__number-likes">96</p>
               </div>
             </div>
@@ -160,19 +158,18 @@
               <p class="photos__name">Мост дьявола</p>
               <p class="photos__author">Автор фото: Антон</p>
               <div class="photos__inner">
-                <svg class="photos__icon-likes" width="23" height="21" viewBox="0 0 23 21" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3"
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z"
-                    fill="black" />
-                </svg>
+                <button class="photos__button-likes" type="button">
+                  <svg class="photos__likes" width="23" height="21">
+                    <use xlink:href="img/sprite.svg#icon-like"></use>
+                  </svg>
+                </button>
                 <p class="photos__number-likes">254</p>
               </div>
             </div>
           </li>
         </ul>
       </section>
-      <section class="page-main__video-gallery video-gallery">
+      <section class="catalog-main__video-gallery video-gallery">
         <h2 class="visually-hidden">Видеопрезентация</h2>
         <p class="video-gallery__subtitle">Все еще сомневаетесь?</p>
         <p class="video-gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в
@@ -180,31 +177,25 @@
         <picture>
           <source type="image/webp" srcset="img/road-mountains.webp 1x, img/road-mountains@2x.webp 2x">
           <img class="video-gallery__img" src="img/road-mountains.jpg" srcset="img/road-mountains@2x.jpg 2x" width="320"
-            height="201" alt="дорога между гор с движением машин">
+            height="201" alt="дорога между гор с движением машин" loading="lazy">
         </picture>
-        <!--
-        <video class="video-gallery__video" width="320" height="201" poster="img/road-between-moutrains.jpg"></video>
-        <img class="video-gallery__img" src="img/road-mountains-mobile.jpg"
-            srcset="img/road-mountains-mobile@2x.jpg 2x" width="320" height="201"
-            alt="дорога между гор с движением машин">
-      -->
         <div class="video-gallery__panel panel">
           <div class="panel__box-range">
-            <input class="panel__range gallery-range" type="range">
+            <input class="panel__range gallery-range" type="range" aria-label="Перемотка видео">
           </div>
           <div class="panel__buttons">
             <button class="panel__button panel__button--restart" type="button" aria-label="рестарт видео">
-              <svg class="panel__icon-restart" width="16" height="20">
+              <svg class="panel__icon panel__icon--restart" width="16" height="20">
                 <use xlink:href="img/sprite.svg#icon-restart"></use>
               </svg>
             </button>
             <button class="panel__button panel__button--subtitles" type="button" aria-label="субтитры">
-              <svg class="panel__icon-subtitles" width="32" height="20">
+              <svg class="panel__icon panel__icon--subtitles" width="32" height="20">
                 <use xlink:href="img/sprite.svg#icon-subtitles"></use>
               </svg>
             </button>
             <button class="panel__button panel__button--fullscreen" type="button" aria-label="полный экран">
-              <svg class="panel__icon-fullscreen" width="20" height="20">
+              <svg class="panel__icon panel__icon--fullscreen" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-fullscreen"></use>
               </svg>
             </button>
@@ -235,7 +226,8 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/likes.js"></script>
 </body>
 
 </html>

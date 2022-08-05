@@ -2,29 +2,11 @@
   font: inherit;
   color: $black-200;
   text-transform: none;
-  outline: none;
-  padding: 18px 22px 14px 22px;
-  background-color: $gray-200;
-  border: none;
   width: 100%;
-
-  &--tel,
-  &--email {
-    width: 100%;
-
-    @media (min-width: $desktop-width) {
-      width: 258px;
-    }
-  }
-
-  &--tel {
-    padding-top: 18px;
-
-    @media (min-width: $desktop-width) {
-      width: 255px;
-      padding-left: 19px;
-    }
-  }
+  outline: none;
+  border: none;
+  background-color: $gray-200;
+  padding: 18px 21px 14px;
 
   &::placeholder {
     color: $black-200;
@@ -39,6 +21,13 @@
     outline: 4px solid $gray-300;
     outline-offset: -4px;
   }
+
+  @media (min-width: $desktop-width) {
+    &--email,
+    &--tel {
+      width: 255px;
+    }
+  }
 }
 
 .field__label {
@@ -47,54 +36,48 @@
   line-height: 26px;
   color: $black-100;
   display: inline-block;
-  margin-right: 14px;
+  margin-right: 15px;
   margin-top: 3px;
 
   &--patronymic {
     margin-right: 17px;
   }
-}
 
-.field__label--tel {
-  margin-bottom: 9px;
+  &--tel {
+    margin-bottom: 9px;
 
-  &::before {
-    background-image: url("../img/icon-phone.svg");
-  }
-}
-
-.field__label--email {
-  margin-bottom: 6px;
-
-  &::before {
-    background-image: url("../img/icon-letter.svg");
+    &::before {
+      background-image: url("../img/icon-phone.svg");
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    width: 147px;
-  }
-}
+  &--email {
+    margin-bottom: 6px;
 
-.field__label--tel,
-.field__label--email {
-  margin-left: 21px;
-  margin-top: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 58px;
-    height: 58px;
-    background-color: $gray-250;
-    background-repeat: no-repeat;
-    background-position: center;
-    right: 0;
-    bottom: 0;
+    &::before {
+      background-image: url("../img/icon-letter.svg");
+    }
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    margin-right: 18px;
-    margin-top: 3px;
+  &--tel,
+  &--email {
+    margin-left: 21px;
+    margin-top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      background-color: $gray-250;
+      background-repeat: no-repeat;
+      background-position: center;
+      right: 0;
+      bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 3px 18px 0 0;
+    }
   }
 }

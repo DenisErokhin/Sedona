@@ -2,7 +2,7 @@
   width: 320px;
   position: fixed;
   background-color: $white-100;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba($black-200, 0.4);
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -10,7 +10,7 @@
 }
 
 .popup--mistake {
-  padding: 40px 41px 35px 41px;
+  padding: 40px 41px 35px;
 
   br {
     display: none;
@@ -18,7 +18,7 @@
 
   @media (min-width: $tablet-width) {
     width: 400px;
-    padding: 50px 47px 49px 47px;
+    padding: 50px 47px 49px;
 
     br {
       display: block;
@@ -37,7 +37,6 @@
 
 .popup__title {
   margin: 0;
-  padding: 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -46,9 +45,7 @@
   }
 
   &--success {
-    margin-bottom: 25px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin: 0 35px 25px;
 
     @media (min-width: $tablet-width) {
       margin-left: 98px;
@@ -72,7 +69,6 @@
   color: $black-100;
   text-align: center;
   margin: 0;
-  padding: 0;
 
   &--mistake {
     margin-bottom: 23px;
@@ -83,14 +79,10 @@
   }
 
   &--success {
-    margin-bottom: 40px;
-    margin-left: 37px;
-    margin-right: 39px;
+    margin: 0 39px 40px 37px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 42px;
-      margin-left: 98px;
-      margin-right: 98px;
+      margin: 0 98px 42px;
     }
   }
 }
@@ -114,8 +106,8 @@
   }
 
   &--success {
-    padding: 18px 20px 14px 20px;
     width: 100%;
+    padding: 18px 20px 14px;
 
     @media (min-width: $tablet-width) {
       width: 458px;
@@ -123,11 +115,10 @@
   }
 
   &--mistake {
-    padding: 18px 24px 14px 24px;
-    display: block;
+    width: 180px;
+    padding: 18px 24px 14px;
     margin-left: auto;
     margin-right: auto;
-    width: 180px;
 
     @media (min-width: $tablet-width) {
       width: 272px;

@@ -7,10 +7,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 204px);
-    grid-auto-flow: row;
-    align-items: start;
-    column-gap: 48px;
-    row-gap: 20px;
+    gap: 20px 48px;
   }
 }
 
@@ -47,10 +44,6 @@
     margin-top: 21px;
 
     @media (min-width: $tablet-width) {
-      margin-top: 0;
-    }
-
-    @media (min-width: $desktop-width) {
       margin-top: 0;
     }
   }

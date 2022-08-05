@@ -9,8 +9,7 @@
 .contacts-group__item {
   position: relative;
   padding-right: 58px;
-  margin-top: 12px;
-  margin-bottom: 0;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 25px;
@@ -19,12 +18,10 @@
   @media (min-width: $desktop-width) {
     display: flex;
     align-items: center;
-    margin-top: 0;
   }
 
   &:first-of-type {
     margin-top: 15px;
-    margin-bottom: 12px;
 
     @media (min-width: $tablet-width) {
       margin-top: 18px;

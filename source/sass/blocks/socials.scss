@@ -1,33 +1,29 @@
 .socials {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   max-width: 220px;
+  list-style: none;
+  padding: 0;
 }
 
 .socials__item {
-  margin-left: 3px;
-  margin-right: 3px;
-  margin-bottom: 6px;
+  margin: 0 3px 6px;
 }
 
 .socials__link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 47px;
   height: 48px;
   background-color: $blue-100;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 
   &::before {
     content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 20px;
     height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &:hover {

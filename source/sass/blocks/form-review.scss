@@ -1,16 +1,16 @@
 .form-review {
   border-top: 2px solid $gray-200;
-  padding: 20px 0 38px 0;
+  padding: 20px 0 38px;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 60px 61px 60px;
+    padding: 0 60px 61px;
     border: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 120px 66px 120px;
+    padding: 0 120px 66px;
   }
 }
 
@@ -18,10 +18,8 @@
   border: none;
   border-bottom: 1px solid $gray-200;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0;
   margin-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   &:last-of-type {
     margin-bottom: 44px;
@@ -35,8 +33,7 @@
   @media (min-width: $tablet-width) {
     border: none;
     margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
   }
 
   &--login {
@@ -53,10 +50,6 @@
         left: -1px;
         top: -26px;
         bottom: 0;
-
-        @media (min-width: $desktop-width) {
-          left: 0;
-        }
       }
     }
   }
@@ -206,18 +199,11 @@
   }
 }
 
-.form-review__prompt {
-  display: block;
+.form-review__advice {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
   text-align: right;
-  align-self: center;
   color: $black-100;
-  margin-left: 40px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    margin-top: 6px;
-  }
+  margin: 19px 0 0 40px;
 }

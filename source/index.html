@@ -4,10 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Седона, город для отдыха, мост дьявола, дорога на север">
+  <meta name="description" content="Cедона - небольшой городок для отдыха">
   <title>Sedona</title>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff2" crossorigin>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -17,7 +22,7 @@
 <body class="page__body">
   <div class="page__container">
     <header class="page-header">
-      <a class="page-header__logo logo">
+      <a class="page-header__logo logo" href="#">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -29,7 +34,7 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current">Главная</a>
+            <a class="main-nav__link main-nav__link--current" href="#">Главная</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Фото и видео</a>
@@ -42,12 +47,12 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__main-welcome page-header__main-welcome--index">
-        <img class="page-header__greeting-img" src="img/text-greeting-sedona.svg" width="284" height="214"
+      <div class="page-header__main-welcome main-welcome main-welcome--index">
+        <img class="main-welcome__img--greeting" src="img/text-greeting-sedona.svg" width="284" height="214"
           alt="Добро пожаловать в Седону">
       </div>
     </header>
-    <main class="page-main main-index">
+    <main>
       <h1 class="visually-hidden">Cедона - сайт для туристов</h1>
       <section class="causes">
         <h2 class="visually-hidden">Причины по которым Седона лучше</h2>
@@ -58,7 +63,8 @@
             <div class="causes__wrapper causes__wrapper--top">
               <div class="causes__inner causes__inner--top">
                 <h3 class="causes__title causes__title--changed">Настоящий<br> городок</h3>
-                <p class="causes__text causes__text--changed">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <p class="causes__text causes__text--changed">Седона не аттракцион для туристов, там течет своя жизнь
+                </p>
               </div>
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)"
@@ -75,7 +81,7 @@
             <dl class="causes__recommendations recommendations">
               <div class="recommendations__item recommendations__item--house">
                 <dt class="recommendations__term">Жилье</dt>
-                <dd class="recommendations__desc">Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</dd>
+                <dd class="recommendations__desc">Рекомендуем пожить в настоящем&nbsp;<br> мотеле, все как в кино!</dd>
               </div>
               <div class="recommendations__item recommendations__item--souvenirs">
                 <dt class="recommendations__term">Сувениры</dt>
@@ -88,7 +94,7 @@
             </dl>
           </li>
           <li class="causes__item">
-            <div class="causes__wrapper  causes__wrapper--bottom">
+            <div class="causes__wrapper causes__wrapper--bottom">
               <div class="causes__inner causes__inner--bottom">
                 <h3 class="causes__title causes__title--changed">Там есть<br> мост дьявола</h3>
                 <p class="causes__text causes__text--changed">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -114,7 +120,7 @@
           </li>
           <li class="causes__item">
             <h3 class="causes__title">Красивая<br> дорога</h3>
-            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
+            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем&nbsp;<br> не скучно!</p>
           </li>
           <li class="causes__item">
             <h3 class="causes__title">Мало<br> туристов</h3>
@@ -130,9 +136,10 @@
         <a href="#" class="search__link button">Найти гостиницу</a>
       </section>
       <div class="map">
-        <iframe class="map__iframe"
+        <iframe class="map__iframe" loading="lazy"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499722.25202960667!2d-112.13898664194832!3d34.63128612298185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1656583971332!5m2!1sru!2s"
-          height="350" allowfullscreen=""></iframe>
+          height="350" allowfullscreen=""
+          title="Город Седона расположенный по обе стороны границы между округами Коконино и Явапаи в северной части долины Верде штата Аризона"></iframe>
       </div>
     </main>
     <footer class="page-footer">
@@ -158,7 +165,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
