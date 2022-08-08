@@ -25,7 +25,7 @@
   @media (min-width: $desktop-width) {
     &--email,
     &--tel {
-      width: 255px;
+      width: 258px;
     }
   }
 }
@@ -49,6 +49,10 @@
     &::before {
       background-image: url("../img/icon-phone.svg");
     }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 15px;
+    }
   }
 
   &--email {
@@ -56,6 +60,10 @@
 
     &::before {
       background-image: url("../img/icon-letter.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 18px;
     }
   }
 
@@ -77,7 +85,9 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin: 3px 18px 0 0;
+      margin-top: 3px;
+      margin-left: 0;
+      margin-bottom: 0;
     }
   }
 }

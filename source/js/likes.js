@@ -1,5 +1,5 @@
-let buttonLikes = document.querySelectorAll('.photos__button-likes');
-let likesNumber = document.querySelectorAll('.photos__number-likes');
+const buttonLikes = document.querySelectorAll('.photos__button-likes');
+const likesNumber = document.querySelectorAll('.photos__number-likes');
 
 for (let i = 0; i < buttonLikes.length; i++) {
 

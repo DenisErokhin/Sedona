@@ -9,10 +9,10 @@
   <title>Sedona</title>
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -55,20 +55,20 @@
     <main class="page__main catalog-main">
       <header class="description description--catalog">
         <h1 class="description__title description__title--catalog">Фото и видео</h1>
-        <p class="description__text description__text--catalog">Не можете решиться на путешествие из-за курса?<br>
+        <p class="description__text description__text--catalog">Не можете решиться на путешествие из-за курса?&nbsp;<br>
           Фотографии
           помогут вам забыть о
           политике и экономике.</p>
       </header>
       <section class="photos">
         <h2 class="visually-hidden">Список фото</h2>
-        <ul class="photos__list photos__items">
+        <ul class="photos__list">
           <li class="photos__item">
-            <a class="photos__link" href="img/places-pictures/folk-spaces-tablet.jpg" target="_blank">
+            <a class="photos__link" href="img/places-pictures/folk-spaces.jpg" target="_blank">
               <picture>
                 <source type="image/webp"
                   srcset="img/places-pictures/folk-spaces.webp 1x, img/places-pictures/folk-spaces@2x.webp 2x">
-                  <img class="photos__img" src="img/places-pictures/folk-spaces.jpg"
+                <img class="photos__img" src="img/places-pictures/folk-spaces.jpg"
                   srcset="img/places-pictures/folk-spaces@2x.jpg 2x" width="280" height="280"
                   alt="Дорога в лесистой местности при закате солнца">
               </picture>
@@ -77,7 +77,7 @@
               <p class="photos__name">Неродные просторы</p>
               <p class="photos__author">Автор фото: Борис</p>
               <div class="photos__inner">
-                <button class="photos__button-likes" type="button">
+                <button class="photos__button-likes" type="button" aria-label="поставить лайк">
                   <svg class="photos__likes" width="23" height="21">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
@@ -104,7 +104,7 @@
               <p class="photos__name">Местная растительность</p>
               <p class="photos__author">Автор фото: Сергей</p>
               <div class="photos__inner">
-                <button class="photos__button-likes" type="button">
+                <button class="photos__button-likes" type="button" aria-label="поставить лайк">
                   <svg class="photos__likes" width="23" height="21">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
@@ -131,7 +131,7 @@
               <p class="photos__name">Дорога на север</p>
               <p class="photos__author">Автор фото: Петр</p>
               <div class="photos__inner">
-                <button class="photos__button-likes" type="button">
+                <button class="photos__button-likes" type="button" aria-label="поставить лайк">
                   <svg class="photos__likes" width="23" height="21">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
@@ -158,7 +158,7 @@
               <p class="photos__name">Мост дьявола</p>
               <p class="photos__author">Автор фото: Антон</p>
               <div class="photos__inner">
-                <button class="photos__button-likes" type="button">
+                <button class="photos__button-likes" type="button" aria-label="поставить лайк">
                   <svg class="photos__likes" width="23" height="21">
                     <use xlink:href="img/sprite.svg#icon-like"></use>
                   </svg>
@@ -172,7 +172,8 @@
       <section class="catalog-main__video-gallery video-gallery">
         <h2 class="visually-hidden">Видеопрезентация</h2>
         <p class="video-gallery__subtitle">Все еще сомневаетесь?</p>
-        <p class="video-gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не подорожали в
+        <p class="video-gallery__text">Смотрите видеопрезентацию и скорее за билетами, пока они&nbsp;<br> не подорожали
+          в
           очередной раз!</p>
         <picture>
           <source type="image/webp" srcset="img/road-mountains.webp 1x, img/road-mountains@2x.webp 2x">
@@ -226,7 +227,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/main-nav.js"></script>
   <script src="js/likes.js"></script>
 </body>
 

@@ -1,5 +1,3 @@
-//main-nav
-
 const mainNav = document.querySelector(".main-nav");
 const mainNavButton = mainNav.querySelector(".main-nav__button-close");
 

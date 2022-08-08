@@ -9,10 +9,10 @@
   <title>Sedona</title>
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" type="font/woff" crossorigin>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
   <link rel="icon" href="img/favicon/icon.svg" sizes="any" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/icon-180x180.png">
@@ -48,7 +48,7 @@
         </ul>
       </nav>
       <div class="page-header__main-welcome main-welcome main-welcome--index">
-        <img class="main-welcome__img--greeting" src="img/text-greeting-sedona.svg" width="284" height="214"
+        <img class="main-welcome__img main-welcome__img--greeting" src="img/text-greeting-sedona.svg" width="284" height="214"
           alt="Добро пожаловать в Седону">
       </div>
     </header>
@@ -56,13 +56,13 @@
       <h1 class="visually-hidden">Cедона - сайт для туристов</h1>
       <section class="causes">
         <h2 class="visually-hidden">Причины по которым Седона лучше</h2>
-        <p class="causes__slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+        <p class="causes__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="causes__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ol class="causes__list">
           <li class="causes__item">
             <div class="causes__wrapper causes__wrapper--top">
               <div class="causes__inner causes__inner--top">
-                <h3 class="causes__title causes__title--changed">Настоящий<br> городок</h3>
+                <h3 class="causes__title causes__title--changed">Настоящий городок</h3>
                 <p class="causes__text causes__text--changed">Седона не аттракцион для туристов, там течет своя жизнь
                 </p>
               </div>
@@ -81,22 +81,22 @@
             <dl class="causes__recommendations recommendations">
               <div class="recommendations__item recommendations__item--house">
                 <dt class="recommendations__term">Жилье</dt>
-                <dd class="recommendations__desc">Рекомендуем пожить в настоящем&nbsp;<br> мотеле, все как в кино!</dd>
+                <dd class="recommendations__desc">Рекомендуем пожить в настоящем&thinsp;<br> мотеле, все как в кино!</dd>
               </div>
               <div class="recommendations__item recommendations__item--souvenirs">
                 <dt class="recommendations__term">Сувениры</dt>
-                <dd class="recommendations__desc">Не только китайского,<br> но и местного производства!</dd>
+                <dd class="recommendations__desc">Не только китайского,&thinsp;<br> но и местного производства!</dd>
               </div>
               <div class="recommendations__item recommendations__item--food">
                 <dt class="recommendations__term">Еда</dt>
-                <dd class="recommendations__desc">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</dd>
+                <dd class="recommendations__desc">Всегда заказывайте фирменный бургер,&thinsp;<br> вы не разочаруетесь!</dd>
               </div>
             </dl>
           </li>
           <li class="causes__item">
             <div class="causes__wrapper causes__wrapper--bottom">
               <div class="causes__inner causes__inner--bottom">
-                <h3 class="causes__title causes__title--changed">Там есть<br> мост дьявола</h3>
+                <h3 class="causes__title causes__title--changed">Там есть мост&nbsp;дьявола</h3>
                 <p class="causes__text causes__text--changed">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <picture>
@@ -115,15 +115,15 @@
             </div>
           </li>
           <li class="causes__item">
-            <h3 class="causes__title">Небольшая<br> площадь</h3>
+            <h3 class="causes__title">Небольшая площадь</h3>
             <p class="causes__text">Все интересные места находятся очень близко</p>
           </li>
           <li class="causes__item">
-            <h3 class="causes__title">Красивая<br> дорога</h3>
-            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем&nbsp;<br> не скучно!</p>
+            <h3 class="causes__title">Красивая дорога</h3>
+            <p class="causes__text">Ехать в Седону из Лас-Вегаса совсем&thinsp;<br> не скучно!</p>
           </li>
           <li class="causes__item">
-            <h3 class="causes__title">Мало<br> туристов</h3>
+            <h3 class="causes__title">Мало туристов</h3>
             <p class="causes__text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
@@ -131,7 +131,7 @@
       <section class="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="search__subtitle">Заинтересовались?</p>
-        <p class="search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в
+        <p class="search__text">Укажите предполагаемые даты поездки,&thinsp;<br> и мы покажем вам лучшие предложения гостиниц в
           Седоне</p>
         <a href="#" class="search__link button">Найти гостиницу</a>
       </section>
@@ -139,7 +139,7 @@
         <iframe class="map__iframe" loading="lazy"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499722.25202960667!2d-112.13898664194832!3d34.63128612298185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1656583971332!5m2!1sru!2s"
           height="350" allowfullscreen=""
-          title="Город Седона расположенный по обе стороны границы между округами Коконино и Явапаи в северной части долины Верде штата Аризона"></iframe>
+          title="Город Седона расположенный по обе стороны границы между округами Коконино и Явапаи в северной части долины Верде штата Аризона"></iframe>-->
       </div>
     </main>
     <footer class="page-footer">
@@ -165,7 +165,7 @@
       </div>
     </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/main-nav.js"></script>
 </body>
 
 </html>
