@@ -75,6 +75,11 @@
     margin-left: 25px;
     margin-right: 17px;
   }
+
+  &:focus-visible {
+    outline: 2px solid $black-200;
+    outline-offset: 2px;
+  }
 }
 
 @media (min-width: $tablet-width) {

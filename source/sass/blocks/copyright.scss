@@ -27,6 +27,11 @@
     fill: $black-200;
     fill-opacity: 0.3;
   }
+
+  &:focus-visible {
+    outline: 2px solid $black-200;
+    outline-offset: 5px;
+  }
 }
 
 .copyright__logo {

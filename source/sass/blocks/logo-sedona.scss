@@ -1,5 +1,9 @@
 .logo {
   display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    z-index: 1;
+  }
 }
 
 .logo__img {
