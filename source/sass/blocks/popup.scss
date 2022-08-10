@@ -3,9 +3,9 @@
   position: fixed;
   background-color: $white-100;
   box-shadow: 0 20px 40px rgba($black-200, 0.4);
-  top: 20px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   display: none;
   z-index: 2;
 }
@@ -126,4 +126,8 @@
       width: 272px;
     }
   }
+}
+
+.popup--active {
+  display: block;
 }
